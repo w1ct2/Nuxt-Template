@@ -2,26 +2,23 @@
     <section class="hero">
         <Container class="hero__container">
             <div class="hero__content">
-                <p class="hero__eyebrow">Nuxt starter template</p>
+                <p class="hero__badge">Nuxt starter template</p>
                 <h1 class="hero__title">Build clean interfaces faster</h1>
                 <p class="hero__text">
                     A ready hero section with reusable layout, clear content hierarchy,
                     and a flexible banner area for future media.
                 </p>
-                <button class="hero__button" type="button">
-                    Get started
-                </button>
-            </div>
-
-            <div class="hero__banner" aria-label="Mock banner">
-                <div class="hero__banner-bar" />
-                <div class="hero__banner-content">
-                    <span class="hero__banner-kicker">Preview</span>
-                    <strong class="hero__banner-title">Product banner</strong>
-                    <span class="hero__banner-line hero__banner-line--wide" />
-                    <span class="hero__banner-line" />
+                <div class="hero__actions">
+                    <a class="hero__button hero__button--primary" href="#">
+                        Get started
+                    </a>
+                    <a class="hero__button hero__button--secondary" href="#">
+                        Learn more <span aria-hidden="true">→</span>
+                    </a>
                 </div>
             </div>
+
+            <div class="hero__banner" aria-label="Mock banner"></div>
         </Container>
     </section>
 </template>
@@ -52,12 +49,14 @@ import Container from '~/components/UI/Container.vue';
     gap: var(--space-5);
 }
 
-.hero__eyebrow {
-    color: var(--color-secondary);
+.hero__badge {
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid rgb(255 255 255 / 0.12);
+    border-radius: 50%;
+    border-radius: var(--radius-full);
+    color: var(--color-text-muted);
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-normal);
-    text-transform: uppercase;
 }
 
 .hero__title {
@@ -74,26 +73,50 @@ import Container from '~/components/UI/Container.vue';
     line-height: var(--line-height-relaxed);
 }
 
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+}
+
 .hero__button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: var(--space-2);
     min-height: 48px;
     padding-inline: var(--space-6);
     border-radius: var(--radius-sm);
-    background-color: var(--color-primary);
-    color: var(--color-text-primary);
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-normal);
     transition:
         background-color var(--transition-fast),
+        color var(--transition-fast),
         transform var(--transition-fast);
 }
 
 .hero__button:hover {
-    background-color: var(--color-primary-hover);
     transform: translateY(-1px);
+}
+
+.hero__button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+.hero__button--primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.hero__button--secondary {
+    color: var(--color-text-primary);
+}
+
+.hero__button--secondary:hover {
+    color: var(--color-primary);
 }
 
 .hero__banner {

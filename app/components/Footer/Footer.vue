@@ -89,12 +89,13 @@ const socials = ['Twitter', 'LinkedIn', 'Instagram'];
 .footer__nav {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: var(--space-2);
     max-width: 620px;
 }
 
 .footer__link {
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-1) var(--space-3);
     border-radius: var(--radius-sm);
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
