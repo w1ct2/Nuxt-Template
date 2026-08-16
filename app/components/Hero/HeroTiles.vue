@@ -17,6 +17,17 @@
             </div>
 
             <div class="hero__tiles" aria-label="Decorative tile composition">
+                <div class="hero__tiles-column">
+                    <span class="hero__tile" />
+                </div>
+                <div class="hero__tiles-column">
+                    <span class="hero__tile" />
+                    <span class="hero__tile" />
+                </div>
+                <div class="hero__tiles-column">
+                    <span class="hero__tile" />
+                    <span class="hero__tile" />
+                </div>
             </div>
         </Container>
     </section>
@@ -41,7 +52,8 @@ import Container from '~/components/UI/Container.vue';
     inset: 0;
     background-image:
         linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+        linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+        radial-gradient(circle at 82% 74%, rgb(99 102 241 / 0.2), transparent 28%);
     background-size: 160px 160px, 160px 160px, 100% 100%;
     content: '';
     pointer-events: none;
@@ -130,6 +142,43 @@ import Container from '~/components/UI/Container.vue';
     color: var(--color-primary);
 }
 
+.hero__tiles {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    justify-content: end;
+    gap: var(--space-6);
+    width: 130%;
+}
+
+.hero__tile {
+    display: flex;
+    border: 1px solid rgb(255 255 255 / 0.14);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    min-width: 0;
+    height: 100vh;
+    width: 100vh;
+    max-height: 280px;
+    max-width: 180px;
+    background: linear-gradient(145deg, #667a56, #263957 55%, #7e486f);
+}
+
+.hero__tiles-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+.hero__tiles-column:nth-child(3) {
+    margin-bottom: auto;
+}
+.hero__tiles-column:nth-child(2) {
+    margin-top: auto;
+}
+.hero__tiles-column:nth-child(1) {
+    margin-top: auto;
+    margin-bottom: 20%;
+}
 
 @media (max-width: 960px) {
     .hero__container {
