@@ -10,7 +10,12 @@
         <!-- <FeaturesInline />
         <FeaturesCentred2x2 />
         <FeaturesProdScreenshot /> -->
-        <FeaturesOffset2x2 />
+        <!-- <FeaturesOffset2x2 /> -->
+
+        <FaqAccordion />
+        <FaqSideBySide />
+        <FaqOffset />
+        <FaqThreeColumns />
     </main>
     <Footer />
 </template>
@@ -27,6 +32,10 @@ import FeaturesInline from '~/components/Features/FeaturesInline.vue';
 import FeaturesCentred2x2 from '~/components/Features/FeaturesCentred2x2.vue';
 import FeaturesProdScreenshot from '~/components/Features/FeaturesProdScreenshot.vue';
 import FeaturesOffset2x2 from '~/components/Features/FeaturesOffset2x2.vue';
+import FaqAccordion from '~/components/FAQ/FaqAccordion.vue';
+import FaqSideBySide from '~/components/FAQ/FaqSideBySide.vue';
+import FaqOffset from '~/components/FAQ/FaqOffset.vue';
+import FaqThreeColumns from '~/components/FAQ/FaqThreeColumns.vue';
 </script>
 
 <style scoped>

@@ -13,6 +13,7 @@
    --color-background: #0d0d0d;
    --color-surface: #19191a;
    --color-surface-hover: #303131;
+   --color-surface-dark: #111827;
 
    /* Text */
    --color-text-primary: #fff;
@@ -22,6 +23,7 @@
    /* Borders */
    --color-border: #e2e8f0;
    --color-border-hover: #cbd5e1;
+   --color-border-subtle: rgb(148 163 184 / 0.2);
 
    /* States */
    --color-success: #22c55e;
