@@ -3,80 +3,114 @@
         <Container class="footer__container">
             <div class="footer__brand">
                 <a class="footer__logo" href="#" aria-label="Go to top">
-                    Footer
+                    {{ brand }}
                 </a>
-
-                <nav class="footer__nav" aria-label="Footer navigation">
-                    <a
-                        v-for="link in navLinks"
-                        :key="link.href"
-                        class="footer__link"
-                        :href="link.href"
-                    >
-                        {{ link.label }}
-                    </a>
-                </nav>
             </div>
 
-            <div class="footer__contacts">
-                <h2 class="footer__title">Contacts</h2>
-
-                <address class="footer__address">
-                    24 Landing Street, Suite 120<br>
-                    San Francisco, CA 94105
-                </address>
-
-                <a class="footer__phone" href="tel:+15550142024">
-                    +1 (555) 014-2024
-                </a>
-
-                <div class="footer__socials" aria-label="Social links">
-                    <a
-                        v-for="social in socials"
-                        :key="social"
-                        class="footer__social"
-                        href="#"
-                        :aria-label="social"
-                    />
+            <nav class="footer__columns" aria-label="Footer navigation">
+                <div
+                    v-for="column in columns"
+                    :key="column.title"
+                    class="footer__column"
+                >
+                    <h3 class="footer__column-title">
+                        {{ column.title }}
+                    </h3>
+                    <ul class="footer__column-list">
+                        <li v-for="link in column.links" :key="link.href">
+                            <a
+                                class="footer__column-link"
+                                :href="link.href"
+                            >
+                                {{ link.label }}
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </nav>
         </Container>
+
+        <FooterBottomBar />
     </footer>
 </template>
 
 <script lang="ts" setup>
 import Container from '~/components/UI/Container.vue';
+import FooterBottomBar from './components/FooterBottomBar.vue';
 
-const navLinks = [
-    { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Social Proof', href: '#social-proof' },
-    { label: 'Plans', href: '#plans' },
-    { label: 'CTA', href: '#cta' },
-];
+interface FooterLink {
+    label: string;
+    href: string;
+}
 
-const socials = ['Twitter', 'LinkedIn', 'Instagram'];
+interface FooterColumn {
+    title: string;
+    links: FooterLink[];
+}
+
+withDefaults(defineProps<{
+    brand?: string;
+    columns?: FooterColumn[];
+}>(), {
+    brand: 'Footer',
+    columns: () => [
+        {
+            title: 'Product',
+            links: [
+                { label: 'Features', href: '#features' },
+                { label: 'How It Works', href: '#how-it-works' },
+                { label: 'Pricing', href: '#plans' },
+                { label: 'FAQ', href: '#faq' },
+            ],
+        },
+        {
+            title: 'Company',
+            links: [
+                { label: 'About Us', href: '#about' },
+                { label: 'Careers', href: '#careers' },
+                { label: 'Blog', href: '#blog' },
+                { label: 'Press', href: '#press' },
+            ],
+        },
+        {
+            title: 'Resources',
+            links: [
+                { label: 'Documentation', href: '#docs' },
+                { label: 'Help Center', href: '#help' },
+                { label: 'Community', href: '#community' },
+                { label: 'Webinars', href: '#webinars' },
+            ],
+        },
+        {
+            title: 'Legal',
+            links: [
+                { label: 'Privacy Policy', href: '#privacy' },
+                { label: 'Terms of Service', href: '#terms' },
+                { label: 'Cookie Policy', href: '#cookies' },
+                { label: 'Licenses', href: '#licenses' },
+            ],
+        },
+    ],
+});
 </script>
 
 <style scoped>
 .footer {
-    padding-block: var(--space-16);
     border-top: 1px solid rgb(255 255 255 / 0.1);
     background-color: #111111;
 }
 
 .footer__container {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     gap: var(--space-12);
+    padding-block: var(--space-16);
 }
 
 .footer__brand {
     display: grid;
     align-content: start;
     justify-items: start;
-    gap: var(--space-6);
 }
 
 .footer__logo {
@@ -86,86 +120,57 @@ const socials = ['Twitter', 'LinkedIn', 'Instagram'];
     line-height: var(--line-height-tight);
 }
 
-.footer__nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: var(--space-2);
-    max-width: 620px;
-}
-
-.footer__link {
-    padding: var(--space-1) var(--space-3);
-    border-radius: var(--radius-sm);
-    color: var(--color-text-muted);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--line-height-normal);
-    transition:
-        background-color var(--transition-fast),
-        color var(--transition-fast);
-}
-
-.footer__link:hover {
-    background-color: rgb(255 255 255 / 0.08);
-    color: var(--color-text-primary);
-}
-
-.footer__contacts {
+.footer__columns {
     display: grid;
-    align-content: start;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-8);
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
     gap: var(--space-4);
 }
 
-.footer__title {
+.footer__column-title {
     color: var(--color-text-primary);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
 }
 
-.footer__address,
-.footer__phone {
-    color: var(--color-text-muted);
-    font-size: var(--font-size-md);
-    font-style: normal;
-    line-height: var(--line-height-relaxed);
-}
-
-.footer__phone {
-    width: fit-content;
-    transition: color var(--transition-fast);
-}
-
-.footer__phone:hover {
-    color: var(--color-text-primary);
-}
-
-.footer__socials {
+.footer__column-list {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: var(--space-3);
-    padding-top: var(--space-2);
+    list-style: none;
 }
 
-.footer__social {
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-full);
-    background-color: var(--color-secondary);
+.footer__column-link {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
     transition:
-        background-color var(--transition-fast),
-        transform var(--transition-fast);
+        color var(--transition-fast),
+        opacity var(--transition-fast);
+    opacity: 0.8;
 }
 
-.footer__social:hover {
-    background-color: var(--color-secondary-hover);
-    transform: translateY(-1px);
+.footer__column-link:hover {
+    color: var(--color-text-primary);
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    .footer__columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 760px) {
     .footer {
-        padding-block: var(--space-12);
+        padding-top: var(--space-12);
     }
 
     .footer__container {
@@ -174,4 +179,9 @@ const socials = ['Twitter', 'LinkedIn', 'Instagram'];
     }
 }
 
+@media (max-width: 480px) {
+    .footer__columns {
+        grid-template-columns: 1fr;
+    }
+}
 </style>

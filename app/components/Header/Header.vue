@@ -88,7 +88,6 @@ const navLinks = [
 }
 
 .header__link:hover {
-    background-color: rgb(255 255 255 / 0.08);
     color: var(--color-text-primary);
 }
 
