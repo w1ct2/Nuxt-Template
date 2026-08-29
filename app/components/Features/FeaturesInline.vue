@@ -38,16 +38,16 @@ const features = [
 }
 
 h2 {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }
 
 .features__intro p {
     max-width: 680px;
-    margin-top: var(--space-6);
+    margin-top: var(--space-4);
     color: var(--color-text-muted);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
 
@@ -85,7 +85,7 @@ h3 {
 .feature p {
     margin-top: var(--space-4);
     color: var(--color-text-muted);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
 

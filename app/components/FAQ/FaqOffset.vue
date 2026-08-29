@@ -47,7 +47,6 @@ h2 {
 .faq__intro p {
     margin: var(--space-6) 0;
     padding-bottom: var(--space-4);
-    border-bottom: 1px solid var(--color-primary);
 }
 
 a {

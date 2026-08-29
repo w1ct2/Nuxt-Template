@@ -45,7 +45,6 @@ h2 {
 .faq__intro p {
     max-width: 1020px;
     margin-top: var(--space-6);
-    border-bottom: 1px solid var(--color-primary);
     padding-bottom: var(--space-4);
 }
 

@@ -1,7 +1,10 @@
 <template>
     <section class="features">
         <Container class="features__layout">
-            <header class="features__intro"><h2>Stay on top of<br>customer support</h2></header>
+            <div class="features__intro">
+                <h2>Stay on top of<br>customer support</h2>
+                <p>Everything your team needs to keep conversations moving and customers happy.</p>
+            </div>
             <div class="features__grid">
                 <article v-for="feature in features" :key="feature.title" class="feature">
                     <span class="feature__icon" aria-hidden="true">{{ feature.icon }}</span>
@@ -36,9 +39,17 @@ const features = [
 }
 
 h2 {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
+}
+
+.features__intro p {
+    max-width: 680px;
+    margin-top: var(--space-4);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-relaxed);
 }
 
 .features__grid {

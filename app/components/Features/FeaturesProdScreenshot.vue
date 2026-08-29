@@ -13,16 +13,7 @@
                 </ul>
             </div>
             <div class="product" aria-label="Product interface mockup">
-                <aside class="product__sidebar"><b>≈</b><span>Overview</span><span class="product__active">Deployments</span><span>Domains</span><span>Settings</span></aside>
-                <div class="product__main">
-                    <div class="product__search">⌕&nbsp; Search projects...</div>
-                    <div class="product__heading"><b>All projects</b><span>Sort by latest</span></div>
-                    <div v-for="project in projects" :key="project.name" class="project">
-                        <span class="project__status" :class="`project__status--${project.status}`" />
-                        <div><b>{{ project.name }}</b><small>Deploys from GitHub · {{ project.time }}</small></div>
-                        <em>{{ project.environment }}</em>
-                    </div>
-                </div>
+                
             </div>
         </Container>
     </section>
@@ -34,12 +25,6 @@ const features = [
     { icon: '↥', title: 'Push to deploy', text: 'Release new work with a single predictable workflow.' },
     { icon: '▣', title: 'SSL certificates', text: 'Keep every custom domain secure automatically.' },
     { icon: '▰', title: 'Database backups', text: 'Restore important data whenever your team needs it.' },
-];
-const projects = [
-    { name: 'Planetaria / ios-app', time: 'initiated 1m ago', environment: 'Preview', status: 'pending' },
-    { name: 'Tailwind Labs / tailwindui.com', time: 'deployed 3m ago', environment: 'Production', status: 'success' },
-    { name: 'Protocol / relay-service', time: 'deployed 8m ago', environment: 'Production', status: 'success' },
-    { name: 'Planetaria / android-app', time: 'failed 12m ago', environment: 'Preview', status: 'error' },
 ];
 </script>
 
@@ -65,15 +50,15 @@ const projects = [
 
 h2 {
     margin-top: var(--space-3);
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }
 
 .features__lead {
-    margin-top: var(--space-6);
+    margin-top: var(--space-3);
     color: var(--color-text-muted);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
 

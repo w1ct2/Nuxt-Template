@@ -7,15 +7,15 @@
         <HeroOffsetWithTabs />
         <HeroTiles></HeroTiles> -->
         
-        <!-- <FeaturesInline />
+        <FeaturesInline />
         <FeaturesCentred2x2 />
-        <FeaturesProdScreenshot /> -->
-        <!-- <FeaturesOffset2x2 /> -->
+        <FeaturesProdScreenshot />
+        <FeaturesOffset2x2 />
 
         <FaqAccordion />
-        <!-- <FaqSideBySide />
+        <FaqSideBySide />
         <FaqOffset />
-        <FaqThreeColumns /> -->
+        <FaqThreeColumns />
     </main>
     <Footer />
 </template>
