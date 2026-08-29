@@ -60,18 +60,18 @@ h2 {
 
 .feature__icon {
     display: grid;
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     place-items: center;
     border-radius: var(--radius-md);
     background-color: var(--color-primary);
     color: var(--color-text-primary);
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-lg);
 }
 
 h3 {
     margin-top: var(--space-6);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
 }
@@ -79,7 +79,7 @@ h3 {
 .feature p {
     margin-top: var(--space-3);
     color: var(--color-text-muted);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
 

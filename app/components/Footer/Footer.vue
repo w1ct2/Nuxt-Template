@@ -98,6 +98,7 @@ withDefaults(defineProps<{
 .footer {
     border-top: 1px solid rgb(255 255 255 / 0.1);
     background-color: #111111;
+    margin-top: var(--space-16);
 }
 
 .footer__container {
