@@ -1,21 +1,23 @@
 <template>
     <Header />
     <main class="main">
-        <HeroOffset />
-        <!-- <HeroCentred />
-        <HeroSplit />
+        <!-- <HeroOffset /> -->
+        <!-- <HeroCentred /> -->
+        <!-- <HeroSplit /> -->
         <HeroOffsetWithTabs />
-        <HeroTiles></HeroTiles> -->
+        <!-- <HeroTiles></HeroTiles> -->
         
-        <FeaturesInline />
+        <!-- <FeaturesInline />
         <FeaturesCentred2x2 />
-        <FeaturesProdScreenshot />
+        <FeaturesProdScreenshot /> -->
         <FeaturesOffset2x2 />
 
         <FaqAccordion />
-        <FaqSideBySide />
+        <!-- <FaqSideBySide />
         <FaqOffset />
-        <FaqThreeColumns />
+        <FaqThreeColumns /> -->
+
+        <HitSales />
     </main>
     <Footer />
 </template>
@@ -36,6 +38,7 @@ import FaqAccordion from '~/components/FAQ/FaqAccordion.vue';
 import FaqSideBySide from '~/components/FAQ/FaqSideBySide.vue';
 import FaqOffset from '~/components/FAQ/FaqOffset.vue';
 import FaqThreeColumns from '~/components/FAQ/FaqThreeColumns.vue';
+import HitSales from '~/components/HitSales/HitSales.vue';
 </script>
 
 <style scoped>

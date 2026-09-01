@@ -34,21 +34,13 @@
                 </div>
             </div>
 
-            <div class="hero__media-wrap">
-                <div
-                    :id="`hero-panel-${activeTab.id}`"
-                    class="hero__media"
-                    role="tabpanel"
-                    :aria-labelledby="`hero-tab-${activeTab.id}`"
-                >
-                    <div class="hero__preview" :class="`hero__preview--${activeTab.id}`">
-                        <span class="hero__preview-kicker">{{ activeTab.previewLabel }}</span>
-                        <strong>{{ activeTab.title }}</strong>
-                        <span class="hero__preview-line hero__preview-line--wide" />
-                        <span class="hero__preview-line" />
-                    </div>
-                    <span class="hero__media-badge">{{ activeTab.badge }}</span>
-                </div>
+            <div
+                :id="`hero-panel-${activeTab.id}`"
+                class="hero__media"
+                role="tabpanel"
+                :aria-labelledby="`hero-tab-${activeTab.id}`"
+            >
+                <span class="hero__media-badge">{{ activeTab.badge }}</span>
             </div>
         </Container>
     </section>
@@ -184,17 +176,12 @@ const activeTab = computed<Tab>(
 }
 
 .hero__button--secondary {
-    border: 1px solid rgb(255 255 255 / 0.2);
     color: var(--color-text-primary);
 }
 
 .hero__button--secondary:hover {
     border-color: var(--color-primary);
     color: var(--color-primary);
-}
-
-.hero__media-wrap {
-    padding-left: var(--space-8);
 }
 
 .hero__media {
@@ -204,66 +191,18 @@ const activeTab = computed<Tab>(
     border: 1px solid rgb(255 255 255 / 0.12);
     border-radius: var(--radius-lg);
     background-color: var(--color-surface-hover);
-    box-shadow: var(--shadow-lg);
-}
-
-.hero__preview {
-    display: grid;
-    align-content: center;
-    gap: var(--space-5);
-    height: 100%;
-    min-height: 430px;
-    padding: var(--space-8);
-    border-radius: var(--radius-md);
-    background-color: #252627;
-    color: var(--color-text-primary);
-    transition: background-color var(--transition-normal);
-}
-
-.hero__preview--two {
-    background-color: #2e3035;
-}
-
-.hero__preview--three {
-    background-color: #363331;
-}
-
-.hero__preview-kicker {
-    color: var(--color-text-muted);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    text-transform: uppercase;
-}
-
-.hero__preview strong {
-    font-size: var(--font-size-2xl);
-    line-height: var(--line-height-tight);
-}
-
-.hero__preview-line {
-    display: block;
-    width: 58%;
-    height: 12px;
-    border-radius: var(--radius-full);
-    background-color: rgb(255 255 255 / 0.16);
-}
-
-.hero__preview-line--wide {
-    width: 82%;
 }
 
 .hero__media-badge {
-    position: absolute;
-    bottom: var(--space-2);
-    left: var(--space-2);
-    padding: var(--space-3) var(--space-5);
-    border: 1px solid rgb(255 255 255 / 0.15);
-    border-radius: var(--radius-full);
+    width: fit-content;
     background-color: var(--color-primary);
+    position: absolute;
+    bottom: var(--space-4);
+    left: var(--space-6);
     color: var(--color-text-primary);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    box-shadow: var(--shadow-md);
+    font-weight: var(--font-weight-bold);
+    padding: var(--space-2) var(--space-6);;
+    border-radius: var(--radius-full);
 }
 
 @media (max-width: 900px) {
