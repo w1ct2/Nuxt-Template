@@ -2,9 +2,9 @@
     <section class="features">
         <Container>
             <div class="features__intro">
-                <p class="features__eyebrow">Deploy faster</p>
-                <h2>Everything you need<br>to deploy your app</h2>
-                <p>Build, ship, and scale with a reliable platform that stays out of your way.</p>
+                <p class="features__eyebrow">Развёртывайте быстрее</p>
+                <h2>Всё необходимое<br>для запуска вашего приложения</h2>
+                <p>Создавайте, запускайте и масштабируйте проекты с надёжной платформой, которая не мешает работать.</p>
             </div>
             <div class="features__grid">
                 <article v-for="feature in features" :key="feature.title" class="feature">
@@ -19,10 +19,10 @@
 <script setup lang="ts">
 import Container from '~/components/UI/Container.vue';
 const features = [
-    { icon: '↥', title: 'Push to deploy', text: 'Deploy every update in seconds with a workflow your whole team can trust.' },
-    { icon: '▣', title: 'SSL certificates', text: 'Secure every domain automatically, without managing certificates yourself.' },
-    { icon: '⟳', title: 'Simple queues', text: 'Run background jobs reliably while keeping your application responsive.' },
-    { icon: '◉', title: 'Advanced security', text: 'Protect your app with sensible defaults and detailed access controls.' },
+    { icon: '↥', title: 'Развёртывание в один клик', text: 'Разворачивайте каждое обновление за секунды с помощью рабочего процесса, которому доверяет вся команда.' },
+    { icon: '▣', title: 'SSL-сертификаты', text: 'Автоматически защищайте каждый домен без необходимости самостоятельно управлять сертификатами.' },
+    { icon: '⟳', title: 'Очереди задач', text: 'Надёжно выполняйте фоновые задачи, сохраняя отзывчивость вашего приложения.' },
+    { icon: '◉', title: 'Расширенная безопасность', text: 'Защищайте приложение разумными настройками по умолчанию и детальными правами доступа.' },
 ];
 </script>
 

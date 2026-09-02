@@ -2,15 +2,15 @@
     <section class="features">
         <Container>
             <div class="features__intro">
-                <h2>Stay on top of customer support</h2>
-                <p>Everything your team needs to keep conversations moving and customers happy.</p>
+                <h2>Контролируйте поддержку клиентов</h2>
+                <p>Всё необходимое вашей команде для поддержки диалогов и удовлетворённости клиентов.</p>
             </div>
             <div class="features__grid">
                 <article v-for="feature in features" :key="feature.title" class="feature">
                     <span class="feature__icon" aria-hidden="true">{{ feature.icon }}</span>
                     <h3>{{ feature.title }}</h3>
                     <p>{{ feature.text }}</p>
-                    <a href="#" class="feature__link">Learn more <span aria-hidden="true">→</span></a>
+                    <a href="#" class="feature__link">Подробнее <span aria-hidden="true">→</span></a>
                 </article>
             </div>
         </Container>
@@ -21,9 +21,9 @@
 import Container from '~/components/UI/Container.vue';
 
 const features = [
-    { icon: '▱', title: 'Unlimited inboxes', text: 'Keep every customer request organized in one clear workspace.' },
-    { icon: '◌', title: 'Manage team members', text: 'Assign conversations and give your team the context it needs.' },
-    { icon: '♲', title: 'Spam report', text: 'Filter unwanted messages before they slow down your support.' },
+    { icon: '▱', title: 'Безлимитные входящие', text: 'Организуйте все запросы клиентов в одном понятном рабочем пространстве.' },
+    { icon: '◌', title: 'Управление командой', text: 'Назначайте диалоги и предоставляйте команде необходимый контекст.' },
+    { icon: '♲', title: 'Отчёты о спаме', text: 'Фильтруйте нежелательные сообщения до того, как они замедлят поддержку.' },
 ];
 </script>
 

@@ -2,18 +2,18 @@
     <section class="hero">
         <Container class="hero__container">
             <div class="hero__content">
-                <p class="hero__badge">Nuxt starter template</p>
-                <h1 class="hero__title">Build clean interfaces faster</h1>
+                <p class="hero__badge">Стартовый шаблон Nuxt</p>
+                <h1 class="hero__title">Создавайте чистые интерфейсы быстрее</h1>
                 <p class="hero__text">
-                    A ready hero section with reusable layout, clear content hierarchy,
-                    and a flexible banner area for future media.
+                    Готовая hero-секция с повторно используемой разметкой, чёткой иерархией контента
+                    и гибкой областью баннера для будущих медиафайлов.
                 </p>
                 <div class="hero__actions">
                     <a class="hero__button hero__button--primary" href="#">
-                        Get started
+                        Начать бесплатно
                     </a>
                     <a class="hero__button hero__button--secondary" href="#">
-                        Learn more <span aria-hidden="true">→</span>
+                        Узнать больше <span aria-hidden="true">→</span>
                     </a>
                 </div>
             </div>

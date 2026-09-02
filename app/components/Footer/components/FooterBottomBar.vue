@@ -2,7 +2,7 @@
     <div class="footer-bottom-bar">
         <Container class="footer-bottom-bar__container">
             <p class="footer-bottom-bar__copyright">
-                &copy; 2024 Your Company, Inc. All rights reserved.
+                &copy; 2024 ТехноСтарт. Все права защищены.
             </p>
 
             <div class="footer-bottom-bar__socials" aria-label="Social links">
@@ -72,7 +72,7 @@ const InstagramIcon = () =>
     );
 
 const socials = [
-    { name: 'Twitter', href: '#', icon: TwitterIcon },
+    { name: 'Twitter (X)', href: '#', icon: TwitterIcon },
     { name: 'LinkedIn', href: '#', icon: LinkedInIcon },
     { name: 'Instagram', href: '#', icon: InstagramIcon },
 ];

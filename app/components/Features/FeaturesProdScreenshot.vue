@@ -2,9 +2,9 @@
     <section class="features">
         <Container class="features__layout">
             <div class="features__content">
-                <p class="features__eyebrow">Deploy faster</p>
-                <h2>A better workflow</h2>
-                <p class="features__lead">Bring planning, deployments, and team communication together in one calm workspace.</p>
+                <p class="features__eyebrow">Быстрый запуск</p>
+                <h2>Эффективный рабочий процесс</h2>
+                <p class="features__lead">Объедините планирование, развёртывание и коммуникацию команды в одном удобном рабочем пространстве.</p>
                 <ul class="features__list">
                     <li v-for="feature in features" :key="feature.title">
                         <span aria-hidden="true">{{ feature.icon }}</span>
@@ -22,9 +22,9 @@
 <script setup lang="ts">
 import Container from '~/components/UI/Container.vue';
 const features = [
-    { icon: '↥', title: 'Push to deploy', text: 'Release new work with a single predictable workflow.' },
-    { icon: '▣', title: 'SSL certificates', text: 'Keep every custom domain secure automatically.' },
-    { icon: '▰', title: 'Database backups', text: 'Restore important data whenever your team needs it.' },
+    { icon: '↥', title: 'Развёртывание в один клик', text: 'Выпускайте обновления с помощью единого предсказуемого рабочего процесса.' },
+    { icon: '▣', title: 'SSL-сертификаты', text: 'Автоматически поддерживайте безопасность каждого пользовательского домена.' },
+    { icon: '▰', title: 'Резервные копии', text: 'Восстанавливайте важные данные в любой момент, когда это необходимо вашей команде.' },
 ];
 </script>
 

@@ -52,42 +52,42 @@ withDefaults(defineProps<{
     brand?: string;
     columns?: FooterColumn[];
 }>(), {
-    brand: 'Footer',
+    brand: 'ТехноСтарт',
     columns: () => [
         {
-            title: 'Product',
+            title: 'Продукт',
             links: [
-                { label: 'Features', href: '#features' },
-                { label: 'How It Works', href: '#how-it-works' },
-                { label: 'Pricing', href: '#plans' },
-                { label: 'FAQ', href: '#faq' },
+                { label: 'Возможности', href: '#features' },
+                { label: 'Как это работает', href: '#how-it-works' },
+                { label: 'Тарифы', href: '#plans' },
+                { label: 'Частые вопросы', href: '#faq' },
             ],
         },
         {
-            title: 'Company',
+            title: 'Компания',
             links: [
-                { label: 'About Us', href: '#about' },
-                { label: 'Careers', href: '#careers' },
-                { label: 'Blog', href: '#blog' },
-                { label: 'Press', href: '#press' },
+                { label: 'О нас', href: '#about' },
+                { label: 'Вакансии', href: '#careers' },
+                { label: 'Блог', href: '#blog' },
+                { label: 'Пресса', href: '#press' },
             ],
         },
         {
-            title: 'Resources',
+            title: 'Ресурсы',
             links: [
-                { label: 'Documentation', href: '#docs' },
-                { label: 'Help Center', href: '#help' },
-                { label: 'Community', href: '#community' },
-                { label: 'Webinars', href: '#webinars' },
+                { label: 'Документация', href: '#docs' },
+                { label: 'Справочный центр', href: '#help' },
+                { label: 'Сообщество', href: '#community' },
+                { label: 'Вебинары', href: '#webinars' },
             ],
         },
         {
-            title: 'Legal',
+            title: 'Правовая информация',
             links: [
-                { label: 'Privacy Policy', href: '#privacy' },
-                { label: 'Terms of Service', href: '#terms' },
-                { label: 'Cookie Policy', href: '#cookies' },
-                { label: 'Licenses', href: '#licenses' },
+                { label: 'Политика конфиденциальности', href: '#privacy' },
+                { label: 'Условия использования', href: '#terms' },
+                { label: 'Политика cookies', href: '#cookies' },
+                { label: 'Лицензии', href: '#licenses' },
             ],
         },
     ],

@@ -2,8 +2,8 @@
     <section class="faq">
         <Container>
             <div class="faq__intro">
-                <h2>Frequently asked questions</h2>
-                <p>Have a different question and can’t find the answer you’re looking for? Reach out to our support team by <a href="mailto:support@example.com">sending us an email</a> and we’ll get back to you as soon as we can.</p>
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Не нашли ответ на ваш вопрос? Свяжитесь с нашей командой поддержки, <a href="mailto:support@technostart.ru">отправив нам email</a>, и мы ответим вам как можно скорее.</p>
             </div>
             <div class="faq__grid">
                 <article v-for="item in faqItems" :key="item.question" class="faq__item">

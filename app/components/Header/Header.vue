@@ -1,8 +1,8 @@
 <template>
     <header class="header">
         <Container class="header__container">
-            <a class="header__logo" href="#" aria-label="Go to top">
-                Header
+            <a class="header__logo" href="#" aria-label="На главную">
+                ТехноСтарт
             </a>
 
             <nav class="header__nav" aria-label="Main navigation">
@@ -23,12 +23,12 @@
 import Container from '~/components/UI/Container.vue';
 
 const navLinks = [
-    { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'Возможности', href: '#features' },
+    { label: 'Как это работает', href: '#how-it-works' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Social Proof', href: '#social-proof' },
-    { label: 'Plans', href: '#plans' },
-    { label: 'CTA', href: '#cta' },
+    { label: 'Отзывы', href: '#social-proof' },
+    { label: 'Тарифы', href: '#plans' },
+    { label: 'Начать', href: '#cta' },
 ];
 </script>
 

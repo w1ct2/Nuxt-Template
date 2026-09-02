@@ -2,11 +2,11 @@
     <section class="hero">
         <Container class="hero__container">
             <div class="hero__content">
-                <span class="hero__badge">hello@example.com</span>
-                <h1 class="hero__title">Bring your product story into focus</h1>
+                <span class="hero__badge">primer@primer.ru</span>
+                <h1 class="hero__title">Создавайте продукты, которые вдохновляют</h1>
                 <p class="hero__text">
-                    Explore the features that help your team move faster and create a
-                    consistent experience for every customer.
+                    Изучите возможности, которые помогают вашей команде работать быстрее и создавать
+                    единый опыт взаимодействия для каждого клиента.
                 </p>
 
                 <div class="hero__tabs" role="tablist" aria-label="Preview selection">
@@ -27,9 +27,9 @@
                 </div>
 
                 <div class="hero__actions">
-                    <a class="hero__button hero__button--primary" href="#">Get started</a>
+                    <a class="hero__button hero__button--primary" href="#">Начать бесплатно</a>
                     <a class="hero__button hero__button--secondary" href="#">
-                        Learn more <span aria-hidden="true">→</span>
+                        Узнать больше <span aria-hidden="true">→</span>
                     </a>
                 </div>
             </div>
@@ -59,9 +59,9 @@ interface Tab {
 }
 
 const tabs: Tab[] = [
-    { id: 'one', label: 'Tab 1', badge: 'Бэйдж 1', previewLabel: 'Preview 01', title: 'Your workspace' },
-    { id: 'two', label: 'Tab 2', badge: 'Бэйдж 2', previewLabel: 'Preview 02', title: 'Team analytics' },
-    { id: 'three', label: 'Tab 3', badge: 'Бэйдж 3', previewLabel: 'Preview 03', title: 'Project overview' },
+    { id: 'one', label: 'Дашборд', badge: 'Аналитика', previewLabel: 'Превью 01', title: 'Ваше рабочее пространство' },
+    { id: 'two', label: 'Команда', badge: 'Участники', previewLabel: 'Превью 02', title: 'Аналитика команды' },
+    { id: 'three', label: 'Проекты', badge: 'Задачи', previewLabel: 'Превью 03', title: 'Обзор проектов' },
 ];
 
 const initialTab = tabs[0]!;

@@ -5,27 +5,27 @@ export interface FaqItem {
 
 export const faqItems: FaqItem[] = [
     {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+        question: 'Как быстро я могу начать работу с платформой?',
+        answer: 'Регистрация занимает не более 2 минут. После создания аккаунта вы получите доступ ко всем базовым функциям и сможете запустить первый проект сразу же. Для вашего удобства доступны пошаговые обучающие материалы.',
     },
     {
-        question: 'How do you make holy water?',
-        answer: 'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro.',
+        question: 'Какие способы оплаты вы принимаете?',
+        answer: 'Мы принимаем банковские карты Visa, MasterCard, Мир, а также оплату через СБП и электронные кошельки. Для корпоративных клиентов доступна оплата по счёту с выставлением всех необходимых документов.',
     },
     {
-        question: 'What do you call someone with no body and no nose?',
-        answer: 'Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+        question: 'Можно ли изменить тарифный план в любой момент?',
+        answer: 'Да, вы можете перейти на любой тариф в любое время. При переходе на более высокий тариф разница в стоимости пересчитывается пропорционально оставшимся дням текущего периода.',
     },
     {
-        question: 'Why do you never see elephants hiding in trees?',
-        answer: "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+        question: 'Как обеспечивается безопасность моих данных?',
+        answer: 'Все данные хранятся на серверах в России с шифрованием на уровне банковских систем. Мы регулярно проводим аудиты безопасности и соблюдаем требования ФЗ-152 о защите персональных данных.',
     },
     {
-        question: "Why can't you hear a pterodactyl go to the bathroom?",
-        answer: 'Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur!',
+        question: 'Предоставляете ли вы техническую поддержку?',
+        answer: 'На всех тарифах, кроме бесплатного, доступна круглосуточная поддержка в чате и по email. На тарифе Pro вам выделяется персональный менеджер, который поможет с любыми вопросами.',
     },
     {
-        question: 'Why did the invisible man turn down the job offer?',
-        answer: "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+        question: 'Есть ли бесплатный пробный период?',
+        answer: 'Да, мы предоставляем 14-дневный пробный период с полным доступом ко всем функциям платформы. Карта для пробного периода не требуется — вы можете протестировать всё и решить, подходит ли вам наш сервис.',
     },
 ];

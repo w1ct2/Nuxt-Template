@@ -2,8 +2,8 @@
     <section class="faq">
         <Container>
             <div class="faq__intro">
-                <h2>Чо asked questions</h2>
-                <p>Can’t find the answer you’re looking for? Reach out to our <a href="mailto:support@example.com">customer support</a> team.</p>
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Не нашли ответ на ваш вопрос? Свяжитесь с нашей командой <a href="mailto:support@technostart.ru">поддержки клиентов</a>.</p>
             </div>
             <div class="faq__list">
                 <article v-for="(item, index) in faqItems" :key="item.question" class="faq__item">

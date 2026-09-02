@@ -3,7 +3,7 @@
         <Container>
             <div class="hit-sales__intro">
                 <h2 class="hit-sales__title">{{ title }}</h2>
-                <p>Build, ship, and scale with a reliable platform that stays out of your way.</p>
+                <p>Создавайте, запускайте и масштабируйте проекты с помощью надёжной платформы, которая не мешает работать.</p>
             </div>
 
             <div class="hit-sales__list">
@@ -65,18 +65,18 @@ withDefaults(defineProps<{
 }>(), {
     title: 'Хиты продаж',
     first: () => ({
-        title: 'Популярный продукт',
-        description: ['– Короткое описание преимущества. Расскажите, почему это действительно хит.', '– Ещё немного текста про продукт: быстро, понятно, с акцентом на ценность.'],
-        buttonLabel: 'Заказать',
+        title: 'Смарт-часы ProMax',
+        description: ['– Отслеживание активности и сна 24/7', '– Защита от воды IP68 и ударопрочный корпус', '– Аккумулятор держит до 14 дней без подзарядки'],
+        buttonLabel: 'Купить сейчас',
         buttonHref: '#',
         mediaBadge: 'Хит осеннего сезона',
     }),
     second: () => ({
-        title: 'Ещё один хит',
-        description: ['– Ещё немного текста про продукт: быстро, понятно, с акцентом на ценность.', '– Ещё немного текста про продукт: быстро, понятно, с акцентом на ценность.', '– Ещё немного текста про продукт: быстро, понятно, с акцентом на ценность.'],
-        buttonLabel: 'Заказать',
+        title: 'Беспроводные наушники AirSound',
+        description: ['– Активное шумоподавление последнего поколения', '– Hi-Fi звук с глубокими басами и чистыми высокими', '– Вес одного наушника всего 4 грамма'],
+        buttonLabel: 'Подробнее',
         buttonHref: '#',
-        mediaBadge: 'Куплен 200+ раз'
+        mediaBadge: 'Куплен 500+ раз'
     }),
 });
 </script>
@@ -116,7 +116,7 @@ withDefaults(defineProps<{
     align-items: stretch;
     justify-content: space-between;
     gap: var(--space-10);
-    height: 480px;
+    height: 440px;
     min-height: 0;
     width: 100%;
 }

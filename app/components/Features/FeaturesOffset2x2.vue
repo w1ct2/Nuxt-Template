@@ -2,8 +2,8 @@
     <section class="features">
         <Container class="features__layout">
             <div class="features__intro">
-                <h2>Stay on top of<br>customer support</h2>
-                <p>Everything your team needs to keep conversations moving and customers happy.</p>
+                <h2>Контролируйте<br>поддержку клиентов</h2>
+                <p>Всё необходимое вашей команде для поддержки диалогов и удовлетворённости клиентов.</p>
             </div>
             <div class="features__grid">
                 <article v-for="feature in features" :key="feature.title" class="feature">
@@ -18,10 +18,10 @@
 <script setup lang="ts">
 import Container from '~/components/UI/Container.vue';
 const features = [
-    { icon: '♲', title: 'Spam report', text: 'Keep the inbox focused by reporting and filtering unwanted messages.' },
-    { icon: '✎', title: 'Compose in markdown', text: 'Write polished replies quickly with clean formatting built in.' },
-    { icon: '◌', title: 'Email commenting', text: 'Leave feedback right where your team needs to see it.' },
-    { icon: '♡', title: 'Customer connections', text: 'Build a complete, shared picture of every customer relationship.' },
+    { icon: '♲', title: 'Отчёты о спаме', text: 'Поддерживайте фокус входящих, сообщая и фильтруя нежелательные сообщения.' },
+    { icon: '✎', title: 'Составление в Markdown', text: 'Быстро создавайте аккуратные ответы со встроенным форматированием.' },
+    { icon: '◌', title: 'Комментарии к письмам', text: 'Оставляйте обратную связь там, где ваша команда должна её увидеть.' },
+    { icon: '♡', title: 'Взаимосвязи с клиентами', text: 'Создавайте полную и общую картину каждого отношения с клиентом.' },
 ];
 </script>
 

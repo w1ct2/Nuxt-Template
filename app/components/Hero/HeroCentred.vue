@@ -3,25 +3,25 @@
         <Container class="hero__container">
             <div class="hero__content">
                 <p class="hero__announcement">
-                    <span>Announcing our next round of funding.</span>
+                    <span>Объявляем о новом раунде инвестиций.</span>
                     <a class="hero__announcement-link" href="#">
-                        Read more <span aria-hidden="true">→</span>
+                        Читать далее <span aria-hidden="true">→</span>
                     </a>
                 </p>
 
-                <h1 class="hero__title">Data to enrich your online business</h1>
+                <h1 class="hero__title">Данные для роста вашего онлайн-бизнеса</h1>
 
                 <p class="hero__text">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                    lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
+                    Получайте глубокую аналитику и действенные инсайты, которые помогают принимать
+                    верные решения и масштабировать ваш бизнес эффективно.
                 </p>
 
                 <div class="hero__actions">
                     <a class="hero__button hero__button--primary" href="#">
-                        Get started
+                        Начать бесплатно
                     </a>
                     <a class="hero__button hero__button--secondary" href="#">
-                        Learn more <span aria-hidden="true">→</span>
+                        Узнать больше <span aria-hidden="true">→</span>
                     </a>
                 </div>
             </div>
