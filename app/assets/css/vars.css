@@ -1,11 +1,10 @@
 :root {
-   /* ========================================
-      COLORS
-      ======================================== */
+   /*----------- COLORS -----------*/
 
    /* Brand */
    --color-primary: #6366f1;
    --color-primary-hover: #4f46e5;
+
    --color-secondary: #f59e0b;
    --color-secondary-hover: #d97706;
 
@@ -31,16 +30,13 @@
    --color-error: #ef4444;
    --color-info: #3b82f6;
 
-
-   /* ========================================
-      TYPOGRAPHY
-      ======================================== */
+   /*----------- TYPOGRAPHY -----------*/
 
    --font-primary: Inter, sans-serif;
    --font-secondary: Roboto, sans-serif;
 
-   --font-size-xs: 12px;
-   --font-size-sm: 14px;
+   --font-size-xs: 8px;
+   --font-size-sm: 12px;
    --font-size-md: 16px;
    --font-size-lg: 20px;
    --font-size-xl: 24px;
@@ -58,10 +54,7 @@
    --line-height-normal: 1.5;
    --line-height-relaxed: 1.7;
 
-
-   /* ========================================
-      SPACING
-      ======================================== */
+   /*----------- SPACING -----------*/
 
    --space-1: 4px;
    --space-2: 8px;
@@ -76,9 +69,7 @@
    --space-20: 80px;
    --space-24: 96px;
 
-   /* ========================================
-      BORDER RADIUS
-      ======================================== */
+   /*----------- BORDER RADIUS -----------*/
 
    --radius-sm: 6px;
    --radius-md: 10px;
@@ -86,28 +77,19 @@
    --radius-xl: 24px;
    --radius-full: 9999px;
 
-
-   /* ========================================
-      SHADOWS
-      ======================================== */
+   /*----------- SHADOWS -----------*/
 
    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05);
    --shadow-md: 0 4px 12px rgb(0 0 0 / 0.08);
    --shadow-lg: 0 10px 30px rgb(0 0 0 / 0.12);
 
-
-   /* ========================================
-      LAYOUT
-      ======================================== */
+   /*----------- LAYOUT -----------*/
 
    --container-width: 1200px;
    --container-padding: 24px;
-
    --header-height: 72px;
 
-   /* ========================================
-      TRANSITIONS
-      ======================================== */
+   /*----------- TRANSITIONS -----------*/
 
    --transition-fast: 150ms ease;
    --transition-normal: 250ms ease;

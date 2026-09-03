@@ -13,9 +13,9 @@
                     :key="column.title"
                     class="footer__column"
                 >
-                    <h3 class="footer__column-title">
+                    <h4 class="footer__column-title">
                         {{ column.title }}
-                    </h3>
+                    </h4>
                     <ul class="footer__column-list">
                         <li v-for="link in column.links" :key="link.href">
                             <a
@@ -135,7 +135,6 @@ withDefaults(defineProps<{
 
 .footer__column-title {
     color: var(--color-text-primary);
-    font-size: var(--font-size-md);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
 }

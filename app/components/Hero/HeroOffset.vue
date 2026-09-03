@@ -61,7 +61,7 @@ import Container from '~/components/UI/Container.vue';
 
 .hero__title {
     max-width: 680px;
-    font-size: clamp(var(--font-size-3xl), 6vw, var(--font-size-5xl));
+    font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }

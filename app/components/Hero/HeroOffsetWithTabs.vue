@@ -103,7 +103,7 @@ const activeTab = computed<Tab>(
 
 .hero__title {
     margin-top: var(--space-5);
-    font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-5xl));
+    font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }
