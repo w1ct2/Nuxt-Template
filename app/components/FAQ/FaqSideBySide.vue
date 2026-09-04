@@ -1,10 +1,12 @@
 <template>
     <section class="faq">
-        <Container>
+        <Container> 
+            <!-- Хэдер часть с заголовками -->
             <div class="faq__intro">
                 <h2>Часто задаваемые вопросы</h2>
                 <p>Не нашли ответ на ваш вопрос? Свяжитесь с нашей командой <a href="mailto:support@technostart.ru">поддержки клиентов</a>.</p>
             </div>
+            <!-- Список вопросов -->
             <div class="faq__list">
                 <article v-for="item in faqItems" :key="item.question" class="faq__item">
                     <h3>{{ item.question }}</h3>
@@ -24,39 +26,29 @@ import Container from '~/components/UI/Container.vue';
 .faq {
     padding-block: var(--space-6);
 }
-
-h2 {
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-}
-
+/* Хэдер часть с заголовками */
 .faq__intro {
     max-width: fit-content;
 }
-
 .faq__intro p,
 .faq__item p {
     color: var(--color-text-muted);
     font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
-
 .faq__intro p {
     max-width: 1020px;
     margin-top: var(--space-6);
     padding-bottom: var(--space-4);
 }
-
-a {
+.faq__intro a {
     color: var(--color-primary);
     font-weight: var(--font-weight-semibold);
 }
-
+/* Список вопросов */
 .faq__list {
     margin-top: clamp(var(--space-12), 7vw, 112px);
 }
-
 .faq__item {
     display: grid;
     grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1fr);
@@ -64,36 +56,22 @@ a {
     padding-block: var(--space-8);
     border-bottom: 1px solid var(--color-border-subtle);
 }
-
 .faq__item:first-child {
     padding-top: 0;
 }
-
 .faq__item:last-child {
     border-bottom: 0;
 }
-
-h3 {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-}
-
-p {
+.faq__item p {
     color: var(--color-text-muted);
     font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
-
+/* Элемент списка вопросов */
 @media (max-width: 700px) {
     .faq__item {
         grid-template-columns: 1fr;
         gap: var(--space-4);
-    }
-
-    h3,
-    p {
-        font-size: var(--font-size-lg);
     }
 }
 </style>

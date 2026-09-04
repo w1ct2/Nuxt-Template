@@ -2,10 +2,12 @@
     <section class="faq">
         <Container>
             <div class="faq__wrapper">
+                <!-- Хэдер часть с заголовками -->
                 <div class="faq__intro">
                     <h2>Часто задаваемые вопросы</h2>
                     <p>Не нашли ответ на ваш вопрос? Свяжитесь с нашей командой <a href="mailto:support@technostart.ru">поддержки клиентов</a>.</p>
                 </div>
+                <!-- Список вопросов -->
                 <div class="faq__list">
                     <article v-for="item in faqItems" :key="item.question" class="faq__item">
                         <h3>{{ item.question }}</h3>
@@ -30,43 +32,29 @@ import Container from '~/components/UI/Container.vue';
     display: flex;
     gap: var(--space-10);
 }
-
-h2 {
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-}
-
+/* Хэдер часть с заголовками */
 .faq__intro p,
 .faq__item p {
     color: var(--color-text-muted);
     font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
-
 .faq__intro p {
     margin: var(--space-6) 0;
     padding-bottom: var(--space-4);
 }
-
-a {
+.faq__intro a {
     color: var(--color-primary);
     font-weight: var(--font-weight-semibold);
 }
-
+/* Список вопросов */
 .faq__list {
     display: grid;
     align-content: start;
     gap: var(--space-10);
     max-width: 50%;
 }
-
-h3 {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-}
-
+/* Элемент списка вопросов */
 .faq__item p {
     margin-top: var(--space-4);
     font-size: var(--font-size-md);
