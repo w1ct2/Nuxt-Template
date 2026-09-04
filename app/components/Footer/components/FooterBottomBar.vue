@@ -1,10 +1,12 @@
 <template>
     <div class="footer-bottom-bar">
         <Container class="footer-bottom-bar__container">
+            <!-- Копирайт -->
             <p class="footer-bottom-bar__copyright">
                 &copy; 2024 ТехноСтарт. Все права защищены.
             </p>
 
+            <!-- Иконки социальных сетей -->
             <div class="footer-bottom-bar__socials" aria-label="Social links">
                 <a
                     v-for="social in socials"
@@ -26,7 +28,7 @@
 import { h } from 'vue';
 import Container from '~/components/UI/Container.vue';
 
-const TwitterIcon = () =>
+const TwitterIcon = () => // SVG-иконка Twitter (X)
     h(
         'svg',
         {
@@ -41,7 +43,7 @@ const TwitterIcon = () =>
         ],
     );
 
-const LinkedInIcon = () =>
+const LinkedInIcon = () => // SVG-иконка LinkedIn
     h(
         'svg',
         {
@@ -56,7 +58,7 @@ const LinkedInIcon = () =>
         ],
     );
 
-const InstagramIcon = () =>
+const InstagramIcon = () => // SVG-иконка Instagram
     h(
         'svg',
         {
@@ -71,7 +73,7 @@ const InstagramIcon = () =>
         ],
     );
 
-const socials = [
+const socials = [ // Массив ссылок на соцсети
     { name: 'Twitter (X)', href: '#', icon: TwitterIcon },
     { name: 'LinkedIn', href: '#', icon: LinkedInIcon },
     { name: 'Instagram', href: '#', icon: InstagramIcon },
@@ -84,7 +86,7 @@ const socials = [
     border-top: 1px solid var(--color-border-subtle);
     background-color: #111111;
 }
-
+/* Контейнер с копирайтом и соцсетями */
 .footer-bottom-bar__container {
     display: flex;
     align-items: center;
@@ -92,21 +94,21 @@ const socials = [
     gap: var(--space-4);
 }
 
-.footer-bottom-bar__copyright {
+.footer-bottom-bar__copyright { /* Копирайт */
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     line-height: var(--line-height-normal);
 }
 
-.footer-bottom-bar__socials {
+.footer-bottom-bar__socials { /* Группа иконок соцсетей */
     display: flex;
     align-items: center;
     gap: var(--space-3);
     flex-shrink: 0;
 }
 
-.footer-bottom-bar__social {
+.footer-bottom-bar__social { /* Ссылка-иконка соцсети */
     width: 36px;
     height: 36px;
     display: inline-flex;
@@ -125,11 +127,12 @@ const socials = [
     transform: translateY(-1px);
 }
 
-.footer-bottom-bar__social-icon {
+.footer-bottom-bar__social-icon { /* Размер SVG-иконки */
     width: 16px;
     height: 16px;
 }
 
+/* Брикпоинты */
 @media (max-width: 520px) {
     .footer-bottom-bar__container {
         flex-direction: column;

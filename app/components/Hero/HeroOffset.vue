@@ -1,13 +1,16 @@
 <template>
     <section class="hero">
         <Container class="hero__container">
+            <!-- Контент hero-секции -->
             <div class="hero__content">
+                <!-- Бейдж -->
                 <p class="hero__badge">Стартовый шаблон Nuxt</p>
                 <h1 class="hero__title">Создавайте чистые интерфейсы быстрее</h1>
                 <p class="hero__text">
                     Готовая hero-секция с повторно используемой разметкой, чёткой иерархией контента
                     и гибкой областью баннера для будущих медиафайлов.
                 </p>
+                <!-- Кнопки действий -->
                 <div class="hero__actions">
                     <a class="hero__button hero__button--primary" href="#">
                         Начать бесплатно
@@ -18,6 +21,7 @@
                 </div>
             </div>
 
+            <!-- Баннер/медиа -->
             <div class="hero__banner" aria-label="Mock banner"></div>
         </Container>
     </section>
@@ -29,13 +33,13 @@ import Container from '~/components/UI/Container.vue';
 </script>
 
 <style scoped>
-.hero {
+.hero { /* Hero-секция */
     margin-top: var(--header-height);
     padding: var(--header-height) var(--header-height);
     background-color: var(--color-surface);
     min-height: calc(100dvh - var(--header-height));
 }
-
+/* Контейнер с контентом и баннером */
 .hero__container {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
@@ -43,13 +47,13 @@ import Container from '~/components/UI/Container.vue';
     align-items: center;
 }
 
-.hero__content {
+.hero__content { /* Основной контент */
     display: grid;
     justify-items: start;
     gap: var(--space-5);
 }
 
-.hero__badge {
+.hero__badge { /* Бейдж */
     padding: var(--space-2) var(--space-4);
     border: 1px solid rgb(255 255 255 / 0.12);
     border-radius: 50%;
@@ -59,21 +63,21 @@ import Container from '~/components/UI/Container.vue';
     line-height: var(--line-height-normal);
 }
 
-.hero__title {
+.hero__title { /* Заголовок hero */
     max-width: 680px;
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }
 
-.hero__text {
+.hero__text { /* Описание hero */
     max-width: 560px;
     color: var(--color-text-muted);
     font-size: var(--font-size-lg);
     line-height: var(--line-height-relaxed);
 }
 
-.hero__actions {
+.hero__actions { /* Контейнер кнопок */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -81,7 +85,7 @@ import Container from '~/components/UI/Container.vue';
     margin-top: var(--space-8);
 }
 
-.hero__button {
+.hero__button { /* Общие стили кнопки */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +123,7 @@ import Container from '~/components/UI/Container.vue';
     color: var(--color-primary);
 }
 
-.hero__banner {
+.hero__banner { /* Баннер-медиа */
     min-height: 360px;
     overflow: hidden;
     border: 1px solid rgb(255 255 255 / 0.12);
@@ -176,6 +180,7 @@ import Container from '~/components/UI/Container.vue';
     width: 84%;
 }
 
+/* Брикпоинты */
 @media (max-width: 860px) {
     .hero {
         padding-block: var(--space-16);

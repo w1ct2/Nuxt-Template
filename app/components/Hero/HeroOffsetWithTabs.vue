@@ -1,14 +1,16 @@
 <template>
     <section class="hero">
         <Container class="hero__container">
+            <!-- Контент hero-секции -->
             <div class="hero__content">
+                <!-- Бейдж -->
                 <span class="hero__badge">primer@primer.ru</span>
                 <h1 class="hero__title">Создавайте продукты, которые вдохновляют</h1>
                 <p class="hero__text">
                     Изучите возможности, которые помогают вашей команде работать быстрее и создавать
                     единый опыт взаимодействия для каждого клиента.
                 </p>
-
+                <!-- Переключатели табов -->
                 <div class="hero__tabs" role="tablist" aria-label="Preview selection">
                     <button
                         v-for="tab in tabs"
@@ -25,7 +27,7 @@
                         {{ tab.label }}
                     </button>
                 </div>
-
+                <!-- Кнопки действий -->
                 <div class="hero__actions">
                     <a class="hero__button hero__button--primary" href="#">Начать бесплатно</a>
                     <a class="hero__button hero__button--secondary" href="#">
@@ -33,7 +35,7 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Медиа-превью активного таба -->
             <div
                 :id="`hero-panel-${activeTab.id}`"
                 class="hero__media"
@@ -50,7 +52,7 @@
 import { computed, ref } from 'vue';
 import Container from '~/components/UI/Container.vue';
 
-interface Tab {
+interface Tab { // Тип для таба превью
     id: string;
     label: string;
     badge: string;
@@ -58,27 +60,27 @@ interface Tab {
     title: string;
 }
 
-const tabs: Tab[] = [
+const tabs: Tab[] = [ // Массив табов превью
     { id: 'one', label: 'Дашборд', badge: 'Аналитика', previewLabel: 'Превью 01', title: 'Ваше рабочее пространство' },
     { id: 'two', label: 'Команда', badge: 'Участники', previewLabel: 'Превью 02', title: 'Аналитика команды' },
     { id: 'three', label: 'Проекты', badge: 'Задачи', previewLabel: 'Превью 03', title: 'Обзор проектов' },
 ];
 
-const initialTab = tabs[0]!;
-const activeTabId = ref<string>(initialTab.id);
-const activeTab = computed<Tab>(
+const initialTab = tabs[0]!; // Начальный таб
+const activeTabId = ref<string>(initialTab.id); // ID активного таба
+const activeTab = computed<Tab>( // Вычисленный активный таб
     () => tabs.find((tab) => tab.id === activeTabId.value) ?? initialTab,
 );
 </script>
 
 <style scoped>
-.hero {
+.hero { /* Hero-секция с табами */
     min-height: calc(100dvh - var(--header-height));
     margin-top: var(--header-height);
     padding-block: var(--space-20);
     background-color: var(--color-surface);
 }
-
+/* Контейнер с контентом и медиа */
 .hero__container {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -86,12 +88,12 @@ const activeTab = computed<Tab>(
     align-items: center;
 }
 
-.hero__content {
+.hero__content { /* Основной контент */
     display: grid;
     justify-items: start;
 }
 
-.hero__badge {
+.hero__badge { /* Бейдж */
     padding: var(--space-2) var(--space-4);
     border: 1px solid rgb(255 255 255 / 0.12);
     border-radius: 50%;
@@ -101,11 +103,8 @@ const activeTab = computed<Tab>(
     line-height: var(--line-height-normal);
 }
 
-.hero__title {
+.hero__title { /* Заголовок */
     margin-top: var(--space-5);
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
 }
 
 .hero__text {
@@ -116,7 +115,7 @@ const activeTab = computed<Tab>(
     line-height: var(--line-height-relaxed);
 }
 
-.hero__tabs {
+.hero__tabs { /* Группа табов */
     display: flex;
     gap: var(--space-2);
     margin-top: var(--space-8);
@@ -125,7 +124,7 @@ const activeTab = computed<Tab>(
     border-radius: var(--radius-full);
 }
 
-.hero__tab {
+.hero__tab { /* Кнопка таба */
     min-height: 36px;
     padding-inline: var(--space-4);
     border-radius: var(--radius-full);
@@ -134,21 +133,20 @@ const activeTab = computed<Tab>(
     font-weight: var(--font-weight-semibold);
     transition: background-color var(--transition-fast), color var(--transition-fast);
 }
-
 .hero__tab:hover,
 .hero__tab--active {
     background-color: var(--color-surface-hover);
     color: var(--color-text-primary);
 }
 
-.hero__actions {
+.hero__actions { /* Контейнер кнопок */
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-4);
     margin-top: var(--space-8);
 }
 
-.hero__button {
+.hero__button { /* Общие стили кнопки */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -184,7 +182,7 @@ const activeTab = computed<Tab>(
     color: var(--color-primary);
 }
 
-.hero__media {
+.hero__media { /* Медиа-превью */
     position: relative;
     min-height: 480px;
     padding: var(--space-6);
@@ -193,7 +191,7 @@ const activeTab = computed<Tab>(
     background-color: var(--color-surface-hover);
 }
 
-.hero__media-badge {
+.hero__media-badge { /* Бейдж на медиа */
     width: fit-content;
     background-color: var(--color-primary);
     position: absolute;
@@ -205,6 +203,7 @@ const activeTab = computed<Tab>(
     border-radius: var(--radius-full);
 }
 
+/* Брикпоинты */
 @media (max-width: 900px) {
     .hero {
         padding-block: var(--space-16);

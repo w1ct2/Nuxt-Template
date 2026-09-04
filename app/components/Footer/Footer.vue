@@ -1,12 +1,13 @@
 <template>
     <footer class="footer">
         <Container class="footer__container">
+            <!-- Блок бренда -->
             <div class="footer__brand">
                 <a class="footer__logo" href="#" aria-label="Go to top">
                     {{ brand }}
                 </a>
             </div>
-
+            <!-- Колонки ссылок навигации -->
             <nav class="footer__columns" aria-label="Footer navigation">
                 <div
                     v-for="column in columns"
@@ -29,7 +30,7 @@
                 </div>
             </nav>
         </Container>
-
+        <!-- низ футера -->
         <FooterBottomBar />
     </footer>
 </template>
@@ -38,21 +39,21 @@
 import Container from '~/components/UI/Container.vue';
 import FooterBottomBar from './components/FooterBottomBar.vue';
 
-interface FooterLink {
+interface FooterLink { // Тип для ссылки в колонке футера
     label: string;
     href: string;
 }
 
-interface FooterColumn {
+interface FooterColumn { // Тип для колонки ссылок футера
     title: string;
     links: FooterLink[];
 }
 
-withDefaults(defineProps<{
+withDefaults(defineProps<{ // Пропсы компонента футера
     brand?: string;
     columns?: FooterColumn[];
 }>(), {
-    brand: 'ТехноСтарт',
+    brand: 'ТехноСтарт', // Значение по умолчанию для названия бренда
     columns: () => [
         {
             title: 'Продукт',
@@ -100,7 +101,7 @@ withDefaults(defineProps<{
     background-color: #111111;
     margin-top: var(--space-16);
 }
-
+/* Контейнер футера: бренд + колонки */
 .footer__container {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
@@ -108,45 +109,45 @@ withDefaults(defineProps<{
     padding-block: var(--space-16);
 }
 
-.footer__brand {
+.footer__brand { /* Секция бренда */
     display: grid;
     align-content: start;
     justify-items: start;
 }
 
-.footer__logo {
+.footer__logo { /* Логотип/название бренда */
     color: var(--color-text-primary);
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }
 
-.footer__columns {
+.footer__columns { /* Сетка колонок навигации */
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--space-8);
 }
 
-.footer__column {
+.footer__column { /* Отдельная колонка ссылок */
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
 }
 
-.footer__column-title {
+.footer__column-title { /* Заголовок колонки */
     color: var(--color-text-primary);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
 }
 
-.footer__column-list {
+.footer__column-list { /* Список ссылок */
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
     list-style: none;
 }
 
-.footer__column-link {
+.footer__column-link { /* Отдельная ссылка */
     color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
@@ -162,6 +163,7 @@ withDefaults(defineProps<{
     opacity: 1;
 }
 
+/* Брикпоинты */
 @media (max-width: 900px) {
     .footer__columns {
         grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,10 +1,12 @@
 <template>
     <section class="features">
         <Container>
+            <!-- Хэдер часть с заголовками -->
             <div class="features__intro">
                 <h2>Контролируйте поддержку клиентов</h2>
                 <p>Всё необходимое вашей команде для поддержки диалогов и удовлетворённости клиентов.</p>
             </div>
+            <!-- Список возможностей -->
             <div class="features__grid">
                 <article v-for="feature in features" :key="feature.title" class="feature">
                     <span class="feature__icon" aria-hidden="true">{{ feature.icon }}</span>
@@ -20,7 +22,7 @@
 <script setup lang="ts">
 import Container from '~/components/UI/Container.vue';
 
-const features = [
+const features = [ // Массив карточек возможностей
     { icon: '▱', title: 'Безлимитные входящие', text: 'Организуйте все запросы клиентов в одном понятном рабочем пространстве.' },
     { icon: '◌', title: 'Управление командой', text: 'Назначайте диалоги и предоставляйте команде необходимый контекст.' },
     { icon: '♲', title: 'Отчёты о спаме', text: 'Фильтруйте нежелательные сообщения до того, как они замедлят поддержку.' },
@@ -32,17 +34,10 @@ const features = [
     padding-block: var(--space-24);
     background-color: var(--color-surface);
 }
-
+/* Хэдер часть с заголовками */
 .features__intro {
     max-width: 760px;
 }
-
-h2 {
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-}
-
 .features__intro p {
     max-width: 680px;
     margin-top: var(--space-4);
@@ -50,21 +45,19 @@ h2 {
     font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
-
+/* Список возможностей */
 .features__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-12);
     margin-top: var(--space-20);
 }
-
-.feature {
+.feature { /* Элемент списка возможностей */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
-.feature__icon {
+.feature__icon { /* Иконка возможности */
     display: grid;
     width: 64px;
     height: 64px;
@@ -74,32 +67,24 @@ h2 {
     color: var(--color-text-primary);
     font-size: var(--font-size-3xl);
 }
-
-h3 {
+.feature h3 {
     margin-top: var(--space-8);
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
 }
-
 .feature p {
     margin-top: var(--space-4);
     color: var(--color-text-muted);
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-relaxed);
 }
-
-.feature__link {
+.feature__link { /* Ссылка */
     margin-top: var(--space-8);
     color: var(--color-primary);
     font-weight: var(--font-weight-semibold);
     transition: color var(--transition-fast);
 }
-
 .feature__link:hover {
     color: var(--color-primary-hover);
 }
 
+/* Брикпоинты */
 @media (max-width: 800px) {
     .features {
         padding-block: var(--space-16);

@@ -1,12 +1,14 @@
 <template>
     <section class="hit-sales">
         <Container>
+            <!-- Хэдер часть с заголовками -->
             <div class="hit-sales__intro">
                 <h2 class="hit-sales__title">{{ title }}</h2>
                 <p>Создавайте, запускайте и масштабируйте проекты с помощью надёжной платформы, которая не мешает работать.</p>
             </div>
-
+            <!-- Список товаров-хитов продаж -->
             <div class="hit-sales__list">
+                <!-- Первый товар -->
                 <div class="hit-sales__row">
                     <div class="hit-sales__content">
                         <h3 class="hit-sales__row-title">
@@ -19,12 +21,13 @@
                             {{ first.buttonLabel }}
                         </a>
                     </div>
-
+                    <!-- Медиа-блок первого товара -->
                     <div class="hit-sales__media">
                         <article v-if="first.mediaBadge">{{ first.mediaBadge }}</article>
                     </div>
                 </div>
 
+                <!-- Второй товар (реверс) -->
                 <div class="hit-sales__row hit-sales__row--reverse">
                     <div class="hit-sales__content">
                         <h3 class="hit-sales__row-title">
@@ -37,7 +40,7 @@
                             {{ second.buttonLabel }}
                         </a>
                     </div>
-
+                    <!-- Медиа-блок второго товара -->
                     <div class="hit-sales__media">
                         <article v-if="second.mediaBadge">{{ second.mediaBadge }}</article>
                     </div>
@@ -50,7 +53,7 @@
 <script lang="ts" setup>
 import Container from '~/components/UI/Container.vue';
 
-interface HitSalesItem {
+interface HitSalesItem { // Тип для товара-хита продаж
     title: string;
     description: string[];
     buttonLabel: string;
@@ -58,12 +61,12 @@ interface HitSalesItem {
     mediaBadge?: string;
 }
 
-withDefaults(defineProps<{
+withDefaults(defineProps<{ // Пропсы компонента хитов продаж
     title?: string;
     first?: HitSalesItem;
     second?: HitSalesItem;
 }>(), {
-    title: 'Хиты продаж',
+    title: 'Хиты продаж', // Заголовок секции по умолчанию
     first: () => ({
         title: 'Смарт-часы ProMax',
         description: ['– Отслеживание активности и сна 24/7', '– Защита от воды IP68 и ударопрочный корпус', '– Аккумулятор держит до 14 дней без подзарядки'],
@@ -82,15 +85,16 @@ withDefaults(defineProps<{
 </script>
 
 <style scoped>
-.hit-sales {
+.hit-sales { /* Секция хитов продаж */
     padding-block: var(--space-16);
 }
+/* Хэдер часть с заголовками */
 .hit-sales__intro {
     max-width: 760px;
     margin-bottom: var(--space-16);
 }
 
-.hit-sales__title {
+.hit-sales__title { /* Заголовок секции */
     margin-bottom: var(--space-4);
     color: var(--color-text-primary);
     font-size: var(--font-size-3xl);
@@ -98,20 +102,20 @@ withDefaults(defineProps<{
     line-height: var(--line-height-tight);
 }
 
-.hit-sales__intro p {
+.hit-sales__intro p { /* Описание секции */
     margin-top: var(--space-6);
     color: var(--color-text-muted);
     font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
 
-.hit-sales__list {
+.hit-sales__list { /* Список товаров */
     display: flex;
     flex-direction: column;
     gap: var(--space-10);
 }
 
-.hit-sales__row {
+.hit-sales__row { /* Строка с товаром */
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -121,11 +125,11 @@ withDefaults(defineProps<{
     width: 100%;
 }
 
-.hit-sales__row--reverse {
+.hit-sales__row--reverse { /* Реверсивная строка товара */
     flex-direction: row-reverse;
 }
 
-.hit-sales__content {
+.hit-sales__content { /* Контентная часть товара */
     display: flex;
     flex-direction: column;
     justify-items: start;
@@ -136,14 +140,14 @@ withDefaults(defineProps<{
     flex: 1 1 0;
 }
 
-.hit-sales__row-title {
+.hit-sales__row-title { /* Заголовок товара */
     color: var(--color-text-primary);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
 }
 
-.hit-sales__ul {
+.hit-sales__ul { /* Список описаний товара */
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
@@ -154,7 +158,7 @@ withDefaults(defineProps<{
     line-height: var(--line-height-relaxed);
 }
 
-.hit-sales__button {
+.hit-sales__button { /* Кнопка CTA */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -176,7 +180,7 @@ withDefaults(defineProps<{
     transform: translateY(-1px);
 }
 
-.hit-sales__media {
+.hit-sales__media { /* Медиа-блок товара */
     position: relative;
     height: 100%;
     max-width: 560px;
@@ -193,7 +197,7 @@ withDefaults(defineProps<{
     object-fit: cover;
 }
 
-.hit-sales__media article {
+.hit-sales__media article { /* Бейдж на медиа */
     width: fit-content;
     background-color: var(--color-primary);
     position: absolute;
@@ -205,6 +209,7 @@ withDefaults(defineProps<{
     border-radius: var(--radius-full);
 }
 
+/* Брикпоинты */
 @media (max-width: 900px) {
     .hit-sales__row,
     .hit-sales__row--reverse {

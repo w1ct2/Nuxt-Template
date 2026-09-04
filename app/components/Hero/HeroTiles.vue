@@ -1,13 +1,16 @@
 <template>
     <section class="hero">
         <Container class="hero__container">
+            <!-- Контент hero-секции -->
             <div class="hero__content">
+                <!-- Бейдж -->
                 <p class="hero__badge">Стартовый шаблон Nuxt</p>
                 <h1 class="hero__title">Мы меняем способ взаимодействия людей</h1>
                 <p class="hero__text">
                     Создавайте значимые впечатления с помощью гибкой основы для вашего
                     продукта, команды и сообщества.
                 </p>
+                <!-- Кнопки действий -->
                 <div class="hero__actions">
                     <a class="hero__button hero__button--primary" href="#">Начать бесплатно</a>
                     <a class="hero__button hero__button--secondary" href="#">
@@ -15,7 +18,7 @@
                     </a>
                 </div>
             </div>
-
+            <!-- Декоративная композиция из тайлов -->
             <div class="hero__tiles" aria-label="Decorative tile composition">
                 <div class="hero__tiles-column">
                     <span class="hero__tile" />
@@ -38,7 +41,7 @@ import Container from '~/components/UI/Container.vue';
 </script>
 
 <style scoped>
-.hero {
+.hero { /* Hero-секция с декоративными тайлами */
     position: relative;
     min-height: calc(100dvh - var(--header-height));
     margin-top: var(--header-height);
@@ -46,7 +49,7 @@ import Container from '~/components/UI/Container.vue';
     overflow: hidden;
     background-color: var(--color-surface);
 }
-
+/* Фоновый декоративный градиент и сетка */
 .hero::before {
     position: absolute;
     inset: 0;
@@ -59,7 +62,7 @@ import Container from '~/components/UI/Container.vue';
     pointer-events: none;
 }
 
-.hero__container {
+.hero__container { /* Контейнер с контентом и тайлами */
     position: relative;
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(400px, 0.85fr);
@@ -68,14 +71,14 @@ import Container from '~/components/UI/Container.vue';
     min-height: calc(100dvh - var(--header-height) - var(--space-20) * 2);
 }
 
-.hero__content {
+.hero__content { /* Основной контент */
     position: relative;
     z-index: 1;
     display: grid;
     justify-items: start;
 }
 
-.hero__badge {
+.hero__badge { /* Бейдж */
     padding: var(--space-2) var(--space-4);
     border: 1px solid rgb(255 255 255 / 0.12);
     border-radius: var(--radius-full);
@@ -84,7 +87,7 @@ import Container from '~/components/UI/Container.vue';
     line-height: var(--line-height-normal);
 }
 
-.hero__title {
+.hero__title { /* Заголовок hero */
     max-width: 760px;
     margin-top: var(--space-5);
     font-size: clamp(var(--font-size-3xl), 5.2vw, var(--font-size-5xl));
@@ -92,7 +95,7 @@ import Container from '~/components/UI/Container.vue';
     line-height: var(--line-height-tight);
 }
 
-.hero__text {
+.hero__text { /* Описание hero */
     max-width: 580px;
     margin-top: var(--space-6);
     color: var(--color-text-muted);
@@ -100,14 +103,14 @@ import Container from '~/components/UI/Container.vue';
     line-height: var(--line-height-relaxed);
 }
 
-.hero__actions {
+.hero__actions { /* Контейнер кнопок */
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-4);
     margin-top: var(--space-8);
 }
 
-.hero__button {
+.hero__button { /* Общие стили кнопки */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -142,7 +145,7 @@ import Container from '~/components/UI/Container.vue';
     color: var(--color-primary);
 }
 
-.hero__tiles {
+.hero__tiles { /* Контейнер декоративных тайлов */
     position: relative;
     min-height: 80vh;
     display: flex;
@@ -151,7 +154,7 @@ import Container from '~/components/UI/Container.vue';
     width: 130%;
 }
 
-.hero__tile {
+.hero__tile { /* Отдельный декоративный тайл */
     display: flex;
     border: 1px solid rgb(255 255 255 / 0.14);
     border-radius: var(--radius-lg);
@@ -164,7 +167,7 @@ import Container from '~/components/UI/Container.vue';
     background: linear-gradient(145deg, #667a56, #263957 55%, #7e486f);
 }
 
-.hero__tiles-column {
+.hero__tiles-column { /* Колонка тайлов */
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
@@ -180,6 +183,7 @@ import Container from '~/components/UI/Container.vue';
     margin-bottom: 20%;
 }
 
+/* Брикпоинты */
 @media (max-width: 960px) {
     .hero__container {
         grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);

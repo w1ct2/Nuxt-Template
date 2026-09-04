@@ -1,10 +1,11 @@
 <template>
     <header class="header">
         <Container class="header__container">
+            <!-- Логотип -->
             <a class="header__logo" href="#" aria-label="На главную">
                 ТехноСтарт
             </a>
-
+            <!-- Основная навигация -->
             <nav class="header__nav" aria-label="Main navigation">
                 <a
                     v-for="link in navLinks"
@@ -22,7 +23,7 @@
 <script lang="ts" setup>
 import Container from '~/components/UI/Container.vue';
 
-const navLinks = [
+const navLinks = [ // Массив ссылок навигации
     { label: 'Возможности', href: '#features' },
     { label: 'Как это работает', href: '#how-it-works' },
     { label: 'FAQ', href: '#faq' },
@@ -33,7 +34,7 @@ const navLinks = [
 </script>
 
 <style scoped>
-.header {
+.header { /* Фиксированная шапка */
     position: fixed;
     z-index: 100;
     top: 0;
@@ -44,7 +45,7 @@ const navLinks = [
     background-color: rgb(13 13 13 / 0.82);
     backdrop-filter: blur(16px);
 }
-
+/* Контейнер шапки: логотип + навигация */
 .header__container {
     display: flex;
     align-items: center;
@@ -53,7 +54,7 @@ const navLinks = [
     gap: var(--space-6);
 }
 
-.header__logo {
+.header__logo { /* Логотип */
     flex: 0 0 auto;
     color: var(--color-text-primary);
     font-size: var(--font-size-xl);
@@ -61,7 +62,7 @@ const navLinks = [
     line-height: var(--line-height-tight);
 }
 
-.header__nav {
+.header__nav { /* Панель навигации */
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -69,12 +70,11 @@ const navLinks = [
     overflow-x: auto;
     scrollbar-width: none;
 }
-
 .header__nav::-webkit-scrollbar {
     display: none;
 }
 
-.header__link {
+.header__link { /* Ссылка навигации */
     flex: 0 0 auto;
     padding: var(--space-2) var(--space-3);
     border-radius: var(--radius-sm);
@@ -91,6 +91,7 @@ const navLinks = [
     color: var(--color-text-primary);
 }
 
+/* Брикпоинты */
 @media (max-width: 760px) {
     .header__container {
         align-items: flex-start;

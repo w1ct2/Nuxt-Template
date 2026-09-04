@@ -1,7 +1,9 @@
 <template>
     <section class="hero">
         <Container class="hero__container">
+            <!-- Контент hero-секции -->
             <div class="hero__content">
+                <!-- Объявление/анонс -->
                 <p class="hero__announcement">
                     <span>Объявляем о новом раунде инвестиций.</span>
                     <a class="hero__announcement-link" href="#">
@@ -9,13 +11,16 @@
                     </a>
                 </p>
 
+                <!-- Заголовок -->
                 <h1 class="hero__title">Данные для роста вашего онлайн-бизнеса</h1>
 
+                <!-- Описание -->
                 <p class="hero__text">
                     Получайте глубокую аналитику и действенные инсайты, которые помогают принимать
                     верные решения и масштабировать ваш бизнес эффективно.
                 </p>
 
+                <!-- Кнопки действий -->
                 <div class="hero__actions">
                     <a class="hero__button hero__button--primary" href="#">
                         Начать бесплатно
@@ -34,26 +39,26 @@ import Container from '~/components/UI/Container.vue';
 </script>
 
 <style scoped>
-.hero {
+.hero { /* Hero-секция */
     margin-top: var(--header-height);
     background-color: var(--color-surface);
     min-height: calc(100dvh - var(--header-height));
 }
-
+/* Контейнер hero-секции */
 .hero__container {
     display: grid;
     min-height: inherit;
     place-items: center;
 }
 
-.hero__content {
+.hero__content { /* Основной контент */
     display: grid;
     justify-items: center;
     max-width: 960px;
     text-align: center;
 }
 
-.hero__announcement {
+.hero__announcement { /* Блок объявления */
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,7 +72,7 @@ import Container from '~/components/UI/Container.vue';
     line-height: var(--line-height-normal);
 }
 
-.hero__announcement-link {
+.hero__announcement-link { /* Ссылка в объявлении */
     color: var(--color-primary);
     font-weight: var(--font-weight-semibold);
 }
@@ -76,14 +81,14 @@ import Container from '~/components/UI/Container.vue';
     color: var(--color-primary-hover);
 }
 
-.hero__title {
+.hero__title { /* Заголовок hero */
     max-width: 900px;
     font-size: clamp(var(--font-size-4xl), 6vw, 76px);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }
 
-.hero__text {
+.hero__text { /* Описание hero */
     max-width: 760px;
     margin-top: var(--space-8);
     color: var(--color-text-muted);
@@ -91,7 +96,7 @@ import Container from '~/components/UI/Container.vue';
     line-height: var(--line-height-relaxed);
 }
 
-.hero__actions {
+.hero__actions { /* Контейнер кнопок */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -99,7 +104,7 @@ import Container from '~/components/UI/Container.vue';
     margin-top: var(--space-8);
 }
 
-.hero__button {
+.hero__button { /* Общие стили кнопки */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -120,7 +125,7 @@ import Container from '~/components/UI/Container.vue';
     transform: translateY(-1px);
 }
 
-.hero__button--primary {
+.hero__button--primary { /* Основная кнопка CTA */
     background-color: var(--color-primary);
     color: var(--color-text-primary);
 }
@@ -129,7 +134,7 @@ import Container from '~/components/UI/Container.vue';
     background-color: var(--color-primary-hover);
 }
 
-.hero__button--secondary {
+.hero__button--secondary { /* Вторичная кнопка */
     color: var(--color-text-primary);
 }
 
@@ -137,6 +142,7 @@ import Container from '~/components/UI/Container.vue';
     color: var(--color-primary);
 }
 
+/* Брикпоинты */
 @media (max-width: 640px) {
     .hero {
         padding-block: var(--space-16);

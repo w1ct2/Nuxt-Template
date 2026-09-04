@@ -1,10 +1,12 @@
 <template>
     <section class="features">
         <Container class="features__layout">
+            <!-- Хэдер часть с заголовками -->
             <div class="features__intro">
                 <h2>Контролируйте<br>поддержку клиентов</h2>
                 <p>Всё необходимое вашей команде для поддержки диалогов и удовлетворённости клиентов.</p>
             </div>
+            <!-- Список возможностей -->
             <div class="features__grid">
                 <article v-for="feature in features" :key="feature.title" class="feature">
                     <span class="feature__icon" aria-hidden="true">{{ feature.icon }}</span>
@@ -17,7 +19,7 @@
 
 <script setup lang="ts">
 import Container from '~/components/UI/Container.vue';
-const features = [
+const features = [ // Массив карточек возможностей
     { icon: '♲', title: 'Отчёты о спаме', text: 'Поддерживайте фокус входящих, сообщая и фильтруя нежелательные сообщения.' },
     { icon: '✎', title: 'Составление в Markdown', text: 'Быстро создавайте аккуратные ответы со встроенным форматированием.' },
     { icon: '◌', title: 'Комментарии к письмам', text: 'Оставляйте обратную связь там, где ваша команда должна её увидеть.' },
@@ -30,14 +32,14 @@ const features = [
     padding-block: var(--space-24);
     background-color: var(--color-surface);
 }
-
+/* Макет с смещением интро и списка */
 .features__layout {
     display: grid;
     grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr);
     gap: var(--space-20);
     align-items: start;
 }
-
+/* Хэдер часть с заголовками */
 h2 {
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
@@ -51,14 +53,14 @@ h2 {
     font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
-
+/* Список возможностей */
 .features__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-16) var(--space-12);
 }
 
-.feature__icon {
+.feature__icon { /* Иконка возможности */
     display: grid;
     width: 50px;
     height: 50px;
@@ -83,6 +85,7 @@ h3 {
     line-height: var(--line-height-relaxed);
 }
 
+/* Брикпоинты */
 @media (max-width: 850px) {
     .features {
         padding-block: var(--space-16);

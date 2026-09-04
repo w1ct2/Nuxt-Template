@@ -1,6 +1,7 @@
 <template>
     <section class="features">
         <Container class="features__layout">
+            <!-- Хэдер часть с заголовками и списком -->
             <div class="features__content">
                 <p class="features__eyebrow">Быстрый запуск</p>
                 <h2>Эффективный рабочий процесс</h2>
@@ -12,6 +13,7 @@
                     </li>
                 </ul>
             </div>
+            <!-- Медиа часть -->
             <div class="product" aria-label="Product interface mockup">
                 
             </div>
@@ -21,7 +23,7 @@
 
 <script setup lang="ts">
 import Container from '~/components/UI/Container.vue';
-const features = [
+const features = [ // Массив списка возможностей
     { icon: '↥', title: 'Развёртывание в один клик', text: 'Выпускайте обновления с помощью единого предсказуемого рабочего процесса.' },
     { icon: '▣', title: 'SSL-сертификаты', text: 'Автоматически поддерживайте безопасность каждого пользовательского домена.' },
     { icon: '▰', title: 'Резервные копии', text: 'Восстанавливайте важные данные в любой момент, когда это необходимо вашей команде.' },
@@ -34,40 +36,34 @@ const features = [
     overflow: hidden;
     background-color: var(--color-surface);
 }
-
+/* Макет с контентом и скриншотом */
 .features__layout {
     display: grid;
     grid-template-columns: minmax(300px, .85fr) minmax(520px, 1.15fr);
     gap: var(--space-16);
     align-items: center;
 }
-
-.features__eyebrow {
+/* Контент часть */
+.features__eyebrow { /* Надпись-бейдж над заголовком */
     color: var(--color-primary);
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
 }
-
-h2 {
+.features__content h2 {
     margin-top: var(--space-3);
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
 }
-
 .features__lead {
     margin-top: var(--space-3);
     color: var(--color-text-muted);
     font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
-
+/* Список возможностей */
 .features__list {
     display: grid;
     gap: var(--space-6);
     margin-top: var(--space-10);
 }
-
 .features__list li {
     display: grid;
     grid-template-columns: var(--space-6) 1fr;
@@ -76,17 +72,14 @@ h2 {
     font-size: var(--font-size-lg);
     line-height: var(--line-height-relaxed);
 }
-
 .features__list li > span {
     color: var(--color-primary);
     font-weight: var(--font-weight-bold);
 }
-
 .features__list strong {
     color: var(--color-text-primary);
 }
-
-.product {
+.product { /* Макет медиа */
     display: grid;
     grid-template-columns: 150px 1fr;
     min-height: 470px;
@@ -97,6 +90,7 @@ h2 {
     box-shadow: var(--shadow-lg);
 }
 
+/* Брикпоинты */
 @media (max-width: 950px) {
     .features {
         padding-block: var(--space-16);
