@@ -32,8 +32,8 @@
 
    /*----------- TYPOGRAPHY -----------*/
 
-   --font-primary: Inter, sans-serif;
-   --font-secondary: Roboto, sans-serif;
+   --font-primary: 'Montserrat', sans-serif;
+   --font-secondary: 'Cormorant Infant', sans-serif;
 
    --font-size-xs: 8px;
    --font-size-sm: 12px;

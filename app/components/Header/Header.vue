@@ -3,7 +3,7 @@
         <Container class="header__container">
             <!-- Логотип -->
             <a class="header__logo" href="#" aria-label="На главную">
-                ТехноСтарт
+                Header
             </a>
             <!-- Основная навигация -->
             <nav class="header__nav" aria-label="Main navigation">

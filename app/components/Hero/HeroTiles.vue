@@ -3,8 +3,7 @@
         <Container class="hero__container">
             <!-- Контент hero-секции -->
             <div class="hero__content">
-                <!-- Бейдж -->
-                <p class="hero__badge">Стартовый шаблон Nuxt</p>
+                <!-- <p class="hero__badge">Стартовый шаблон Nuxt</p> -->
                 <h1 class="hero__title">Мы меняем способ взаимодействия людей</h1>
                 <p class="hero__text">
                     Создавайте значимые впечатления с помощью гибкой основы для вашего

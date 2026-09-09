@@ -53,7 +53,7 @@ withDefaults(defineProps<{ // Пропсы компонента футера
     brand?: string;
     columns?: FooterColumn[];
 }>(), {
-    brand: 'ТехноСтарт', // Значение по умолчанию для названия бренда
+    brand: 'Footer',
     columns: () => [
         {
             title: 'Продукт',

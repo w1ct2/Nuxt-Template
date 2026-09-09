@@ -3,8 +3,7 @@
         <Container class="hero__container">
             <!-- Контент hero-секции -->
             <div class="hero__content">
-                <!-- Бейдж -->
-                <span class="hero__badge">primer@primer.ru</span>
+                <!-- <span class="hero__badge">primer@primer.ru</span> -->
                 <h1 class="hero__title">Создавайте продукты, которые вдохновляют</h1>
                 <p class="hero__text">
                     Изучите возможности, которые помогают вашей команде работать быстрее и создавать

@@ -3,7 +3,7 @@
         <Container class="footer-bottom-bar__container">
             <!-- Копирайт -->
             <p class="footer-bottom-bar__copyright">
-                &copy; 2024 ТехноСтарт. Все права защищены.
+                &copy; 2024 Company. Все права защищены.
             </p>
 
             <!-- Иконки социальных сетей -->

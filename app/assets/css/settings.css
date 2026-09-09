@@ -83,10 +83,12 @@ ul {
 h1 {
 	font-size: var(--font-size-4xl); /* 48px */
 	font-weight: var(--font-weight-semibold);
+	font-family: var(--font-secondary);
 }
 h2 {
 	font-size: var(--font-size-3xl); /* 40px */
 	font-weight: var(--font-weight-semibold);
+	font-family: var(--font-secondary);
 }
 h3 {
 	font-size: var(--font-size-lg); /* 20px */	

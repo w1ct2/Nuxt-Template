@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Cormorant Infant Italic';
+    src: url('../fonts/Cormorant_Infant/CormorantInfant-Italic-VariableFont_wght.ttf') format('ttf');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('../fonts/Cormorant_Infant/CormorantInfant-VariableFont_wght.ttf') format('ttf');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Italic';
+    src: url('../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('ttf');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat/Montserrat-VariableFont_wght.ttf') format('ttf');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
