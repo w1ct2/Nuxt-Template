@@ -3,13 +3,12 @@
         <Container class="hero__container">
             <!-- Контент hero-секции -->
             <div class="hero__content">
-                <!-- Объявление/анонс -->
-                <p class="hero__announcement">
+                <!-- <p class="hero__announcement">
                     <span>Объявляем о новом раунде инвестиций.</span>
                     <a class="hero__announcement-link" href="#">
                         Читать далее <span aria-hidden="true">→</span>
                     </a>
-                </p>
+                </p> -->
 
                 <!-- Заголовок -->
                 <h1 class="hero__title">Данные для роста вашего онлайн-бизнеса</h1>
@@ -22,12 +21,12 @@
 
                 <!-- Кнопки действий -->
                 <div class="hero__actions">
-                    <a class="hero__button hero__button--primary" href="#">
-                        Начать бесплатно
-                    </a>
-                    <a class="hero__button hero__button--secondary" href="#">
-                        Узнать больше <span aria-hidden="true">→</span>
-                    </a>
+                    <TheButton type="primary" size="medium">
+                        <template #text>Начать бесплатно</template>
+                    </TheButton>
+                    <TheButton type="transparent" size="medium">
+                        <template #text>Узнать больше</template>
+                    </TheButton>
                 </div>
             </div>
         </Container>
@@ -36,6 +35,7 @@
 
 <script lang="ts" setup>
 import Container from '~/components/UI/Container.vue';
+import TheButton from '../UI/TheButton.vue';
 </script>
 
 <style scoped>
@@ -83,7 +83,7 @@ import Container from '~/components/UI/Container.vue';
 
 .hero__title { /* Заголовок hero */
     max-width: 900px;
-    font-size: clamp(var(--font-size-4xl), 6vw, 76px);
+    font-size: var(--font-size-5xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
 }
@@ -92,7 +92,7 @@ import Container from '~/components/UI/Container.vue';
     max-width: 760px;
     margin-top: var(--space-8);
     color: var(--color-text-muted);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     line-height: var(--line-height-relaxed);
 }
 

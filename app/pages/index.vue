@@ -1,11 +1,11 @@
 <template>
     <Header />
     <main class="main">
-        <!-- <HeroOffset /> -->
-        <!-- <HeroCentred /> -->
-        <!-- <HeroSplit /> -->
+        <HeroOffset />
+        <HeroCentred />
+        <HeroSplit />
         <HeroOffsetWithTabs />
-        <!-- <HeroTiles></HeroTiles> -->
+        <HeroTiles></HeroTiles>
         
         <!-- <FeaturesInline />
         <FeaturesCentred2x2 />

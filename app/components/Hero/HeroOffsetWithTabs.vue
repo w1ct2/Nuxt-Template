@@ -28,10 +28,12 @@
                 </div>
                 <!-- Кнопки действий -->
                 <div class="hero__actions">
-                    <a class="hero__button hero__button--primary" href="#">Начать бесплатно</a>
-                    <a class="hero__button hero__button--secondary" href="#">
-                        Узнать больше <span aria-hidden="true">→</span>
-                    </a>
+                    <TheButton type="primary" size="medium">
+                        <template #text>Оформить заявку</template>
+                    </TheButton>
+                    <TheButton type="transparent" size="medium">
+                        <template #text>Узнать больше</template>
+                    </TheButton>
                 </div>
             </div>
             <!-- Медиа-превью активного таба -->
@@ -50,6 +52,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
 import Container from '~/components/UI/Container.vue';
+import TheButton from '../UI/TheButton.vue';
 
 interface Tab { // Тип для таба превью
     id: string;
@@ -110,7 +113,7 @@ const activeTab = computed<Tab>( // Вычисленный активный та
     max-width: 560px;
     margin-top: var(--space-5);
     color: var(--color-text-muted);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
 

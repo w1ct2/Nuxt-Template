@@ -13,12 +13,12 @@
                     </p>
                     <!-- Кнопки действий -->
                     <div class="hero__actions">
-                        <a class="hero__button hero__button--primary" href="#">
-                            Начать бесплатно
-                        </a>
-                        <a class="hero__button hero__button--secondary" href="#">
-                            Узнать больше <span aria-hidden="true">→</span>
-                        </a>
+                        <TheButton type="primary" size="medium">
+                            <template #text>Начать бесплатно</template>
+                        </TheButton>
+                        <TheButton type="transparent" size="medium">
+                            <template #text>Узнать больше</template>
+                        </TheButton>
                     </div>
                 </div>
             </Container>
@@ -31,6 +31,7 @@
 
 <script lang="ts" setup>
 import Container from '~/components/UI/Container.vue';
+import TheButton from '../UI/TheButton.vue';
 </script>
 
 <style scoped>
