@@ -3,5 +3,10 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   css: ['~/assets/css/vars.css', '~/assets/css/settings.css', '~/assets/css/fonts.css'],
-  modules: ['nuxt-aos', '@nuxt/icon', '@nuxt/fonts', /* 'nuxt-studio' */]
+  modules: [
+    'nuxt-aos', 
+    '@nuxt/icon', 
+    '@nuxt/fonts', 
+    /* 'nuxt-studio' */,
+  ]
 })

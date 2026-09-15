@@ -18,6 +18,11 @@
                         <template #text>Узнать больше</template>
                     </TheButton>
                 </div>
+                <TheInput
+                    placeholder="Поиск..."
+                    size="medium"
+                    clearable
+                />
             </div>
 
             <!-- Баннер/медиа -->
@@ -29,6 +34,7 @@
 <script lang="ts" setup>
 import Container from '~/components/UI/Container.vue';
 import TheButton from '../UI/TheButton.vue';
+import TheInput from '../UI/TheInput.vue';
 </script>
 
 <style scoped>
