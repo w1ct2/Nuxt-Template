@@ -148,7 +148,7 @@ withDefaults(defineProps<{ // Пропсы компонента футера
 }
 
 .footer__column-link { /* Отдельная ссылка */
-    color: var(--color-text-secondary);
+    color: var(--color-text-muted);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     line-height: var(--line-height-normal);

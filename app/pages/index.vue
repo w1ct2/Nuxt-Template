@@ -18,6 +18,8 @@
         <FaqThreeColumns /> -->
 
         <HitSales />
+
+        <GallerySection />
     </main>
     <Footer />
 </template>
@@ -39,6 +41,7 @@ import FaqSideBySide from '~/components/FAQ/FaqSideBySide.vue';
 import FaqOffset from '~/components/FAQ/FaqOffset.vue';
 import FaqThreeColumns from '~/components/FAQ/FaqThreeColumns.vue';
 import HitSales from '~/components/HitSales/HitSales.vue';
+import GallerySection from '~/components/GallerySection/Gallery.vue';
 </script>
 
 <style scoped>

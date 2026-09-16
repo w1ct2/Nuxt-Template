@@ -8,5 +8,14 @@ export default defineNuxtConfig({
     '@nuxt/icon', 
     '@nuxt/fonts', 
     /* 'nuxt-studio' */,
-  ]
+  ],
+  app: {
+    head: {
+      title: 'Nuxt Template',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { charset: 'utf-8' },
+      ]
+    }
+  }
 })
