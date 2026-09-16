@@ -7,7 +7,7 @@
                 <!-- Кнопка закрытия -->
                 <button type="button" class="gallery-modal__close" aria-label="Закрыть" @click="close">×</button>
                 <!-- Кнопки навигации -->
-                <button v-if="works.length > 1" type="button"
+                <button v-if="data.length > 1" type="button"
                     class="gallery-modal__navigation gallery-modal__navigation--prev" aria-label="Предыдущая работа"
                     @click="previous">
                     ‹
@@ -15,24 +15,22 @@
                 <!-- Контент модального окна -->
                 <div class="gallery-modal__content">
                     <p class="gallery-modal__title">
-                        {{ currentWork.title }}
+                        {{ currentItem.title }}
                     </p>
-
                     <div class="gallery-modal__media">
-                        <img :src="currentWork.imageFull" :alt="currentWork.title" class="gallery-modal__img"
+                        <img :src="currentItem.imageFull" :alt="currentItem.title" class="gallery-modal__img"
                             decoding="async" />
                     </div>
-
                     <p class="gallery-modal__desc">
-                        {{ currentWork.description }}
+                        {{ currentItem.description }}
                     </p>
-
-                    <div v-if="works.length > 1" class="gallery-modal__counter">
-                        {{ currentIndex + 1 }} / {{ works.length }}
+                    <!-- Счетчик текущего элемента -->
+                    <div v-if="data.length > 1" class="gallery-modal__counter">
+                        {{ currentIndex + 1 }} / {{ data.length }}
                     </div>
                 </div>
                 <!-- Кнопки навигации -->
-                <button v-if="works.length > 1" type="button"
+                <button v-if="data.length > 1" type="button"
                     class="gallery-modal__navigation gallery-modal__navigation--next" aria-label="Следующая работа"
                     @click="next">
                     ›
@@ -44,12 +42,11 @@
 
 <script setup>
 const props = defineProps({
-    works: {
+    data: { // Массив контента
         type: Array,
         required: true
     },
-
-    startIndex: {
+    startIndex: { // Индекс элемента, с которой открывается модальное окно
         type: Number,
         default: 0
     }
@@ -60,28 +57,28 @@ const emit = defineEmits(['close'])
 const currentIndex = ref(
     Math.min(
         Math.max(0, props.startIndex),
-        Math.max(0, props.works.length - 1)
+        Math.max(0, props.data.length - 1)
     )
 )
 
-const currentWork = computed(() => {
-    return props.works[currentIndex.value]
+const currentItem = computed(() => {
+    return props.data[currentIndex.value]
 })
 
 function next() {
-    if (props.works.length <= 1) return
+    if (props.data.length <= 1) return
     currentIndex.value =
-        (currentIndex.value + 1) % props.works.length
+        (currentIndex.value + 1) % props.data.length
 
     console.log('next', currentIndex.value)
 }
 
 function previous() {
-    if (props.works.length <= 1) return
+    if (props.data.length <= 1) return
 
     currentIndex.value =
-        (currentIndex.value - 1 + props.works.length) %
-        props.works.length
+        (currentIndex.value - 1 + props.data.length) %
+        props.data.length
 }
 
 function close() {

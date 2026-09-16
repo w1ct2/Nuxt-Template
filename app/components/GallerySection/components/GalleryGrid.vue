@@ -1,7 +1,7 @@
 <template>
     <div class="gallery-grid" aria-label="Галерея работ">
-        <GalleryItem v-for="(item, index) in works" :key="item.id" :item="item" @open="openPreview(index)" />
-        <GalleryModal v-if="previewOpen" :works="works" :start-index="previewStartIndex" @close="previewOpen = false" />
+        <GalleryItem v-for="(item, index) in data" :key="item.id" :item="item" @open="openPreview(index)" />
+        <GalleryModal v-if="previewOpen" :data="data" :start-index="previewStartIndex" @close="previewOpen = false" />
     </div>
 </template>
 
@@ -9,7 +9,7 @@
 import GalleryItem from './GalleryItem.vue'
 import GalleryModal from './GalleryModal.vue'
 
-const works = [
+const data = [
     {
         id: 1,
         title: 'Aveline Garden',
