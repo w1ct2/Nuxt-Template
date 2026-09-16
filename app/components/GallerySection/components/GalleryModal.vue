@@ -153,6 +153,7 @@ onUnmounted(() => {
     align-items: center;
     gap: var(--space-3);
     padding: var(--space-4);
+    pointer-events: auto;
 }
 
 .gallery-modal__title {
@@ -217,6 +218,7 @@ onUnmounted(() => {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-regular);
     cursor: pointer;
+    pointer-events: auto;
     transition:
         background var(--transition-fast),
         border-color var(--transition-fast),
@@ -246,6 +248,7 @@ onUnmounted(() => {
     color: var(--color-text-primary);
     font-size: var(--font-size-2xl);
     cursor: pointer;
+    pointer-events: auto;
     transition:
         background var(--transition-fast),
         transform var(--transition-fast),
