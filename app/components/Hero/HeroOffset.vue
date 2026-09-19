@@ -19,9 +19,6 @@
                     </TheButton>
                 </div>
             </div>
-
-            <!-- Баннер/медиа -->
-            <!-- <div class="hero__banner" aria-label="Mock banner"></div> -->
         </Container>
     </section>
 </template>
@@ -34,16 +31,9 @@ import TheButton from '../UI/TheButton.vue';
 <style scoped>
 .hero { /* Hero-секция */
     margin-top: var(--header-height);
-    padding: var(--header-height) var(--header-height);
+    padding: var(--space-16);
     background-color: var(--color-surface);
     min-height: calc(100dvh - var(--header-height));
-}
-/* Контейнер с контентом и баннером */
-.hero__container {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
-    gap: var(--space-12);
-    align-items: center;
 }
 
 .hero__content { /* Основной контент */
@@ -64,9 +54,6 @@ import TheButton from '../UI/TheButton.vue';
 
 .hero__title { /* Заголовок hero */
     max-width: 680px;
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
 }
 
 .hero__text { /* Описание hero */
@@ -134,55 +121,14 @@ import TheButton from '../UI/TheButton.vue';
     box-shadow: var(--shadow-lg);
 }
 
-.hero__banner-bar {
-    height: 56px;
-    border-bottom: 1px solid rgb(15 23 42 / 0.08);
-    background:
-        linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-}
-
-.hero__banner-content {
-    display: grid;
-    gap: var(--space-4);
-    align-content: center;
-    min-height: 304px;
-    padding: var(--space-8);
-}
-
-.hero__banner-kicker {
-    width: fit-content;
-    padding: var(--space-2) var(--space-3);
-    border-radius: var(--radius-sm);
-    background-color: rgb(99 102 241 / 0.12);
-    color: var(--color-primary-hover);
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-normal);
-    text-transform: uppercase;
-}
-
-.hero__banner-title {
-    color: #0f172a;
-    font-size: var(--font-size-2xl);
-    line-height: var(--line-height-tight);
-}
-
-.hero__banner-line {
-    display: block;
-    width: 62%;
-    height: 12px;
-    border-radius: var(--radius-full);
-    background-color: rgb(15 23 42 / 0.14);
-}
-
-.hero__banner-line--wide {
-    width: 84%;
-}
-
 /* Брикпоинты */
-@media (max-width: 860px) {
+@media (max-width: 768px) {
     .hero {
-        padding-block: var(--space-16);
+        padding: var(--space-12);
+    }
+
+    .hero__text {
+        font-size: var(--font-size-md);
     }
 
     .hero__container {
@@ -190,9 +136,9 @@ import TheButton from '../UI/TheButton.vue';
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .hero {
-        padding-block: var(--space-12);
+        padding-block: var(--space-8);
     }
 
     .hero__text {
@@ -201,15 +147,6 @@ import TheButton from '../UI/TheButton.vue';
 
     .hero__button {
         width: 100%;
-    }
-
-    .hero__banner {
-        min-height: 280px;
-    }
-
-    .hero__banner-content {
-        min-height: 224px;
-        padding: var(--space-6);
     }
 }
 

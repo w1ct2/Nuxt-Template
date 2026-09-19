@@ -86,21 +86,46 @@ h1 {
 	font-family: var(--font-secondary);
 }
 h2 {
-	font-size: var(--font-size-3xl); /* 40px */
+  	font-size: var(--font-size-3xl); /* 40px */
 	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-tight);
 	font-family: var(--font-secondary);
 }
 h3 {
-	font-size: var(--font-size-lg); /* 20px */	
+	font-family: var(--font-primary);
+	font-size: var(--font-size-lg); /* 20px */
 	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-normal);
 }
 h4 {
+	font-family: var(--font-primary);
 	font-size: var(--font-size-md); /* 16px */
 	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-normal);
 }
 p {
-	font-size: var(--font-size-md);
+	margin: 0;
+	font-family: var(--font-primary);
+	font-size: var(--font-size-md); /* 16px */
 	font-weight: var(--font-weight-regular);
 	line-height: var(--line-height-relaxed);
+	color: var(--color-text-primary);
+}
+@media (max-width: 768px) {
+	h1 {
+		font-size: var(--font-size-3xl); /* 40px */
+	}
+
+	h2 {
+		font-size: var(--font-size-2xl); /* 32px */
+	}
+
+	h3 {
+		font-size: var(--font-size-lg); /* 20px */
+	}
+
+	p {
+		font-size: var(--font-size-md); /* 16px */
+	}
 }
 

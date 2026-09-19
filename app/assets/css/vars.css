@@ -33,7 +33,7 @@
    /*----------- TYPOGRAPHY -----------*/
 
    --font-primary: 'Montserrat', sans-serif;
-   --font-secondary: 'Cormorant Infant', sans-serif;
+   --font-secondary: 'Cormorant Infant', serif;
 
    --font-size-xs: 8px;
    --font-size-sm: 12px;
@@ -94,4 +94,12 @@
    --transition-fast: 150ms ease;
    --transition-normal: 250ms ease;
    --transition-slow: 400ms ease;
+
+   /*----------- BREAKPOINTS -----------*/
+
+   --breakpoint-xs: 480px;
+   --breakpoint-sm: 640px;
+   --breakpoint-md: 768px;
+   --breakpoint-lg: 1024px;
+   --breakpoint-xl: 1280px;
 }

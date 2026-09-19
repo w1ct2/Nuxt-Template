@@ -83,9 +83,6 @@ import TheButton from '../UI/TheButton.vue';
 
 .hero__title { /* Заголовок hero */
     max-width: 900px;
-    font-size: var(--font-size-5xl);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
 }
 
 .hero__text { /* Описание hero */
@@ -143,17 +140,13 @@ import TheButton from '../UI/TheButton.vue';
 }
 
 /* Брикпоинты */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .hero {
-        padding-block: var(--space-16);
+        padding-block: var(--space-8);
     }
 
     .hero__announcement {
         font-size: var(--font-size-sm);
-    }
-
-    .hero__title {
-        font-size: clamp(var(--font-size-3xl), 12vw, var(--font-size-5xl));
     }
 
     .hero__text {

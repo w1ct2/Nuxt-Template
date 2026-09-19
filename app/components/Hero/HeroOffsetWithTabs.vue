@@ -206,13 +206,17 @@ const activeTab = computed<Tab>( // Вычисленный активный та
 }
 
 /* Брикпоинты */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .hero {
-        padding-block: var(--space-16);
+        padding: var(--space-8);
     }
 
     .hero__container {
         grid-template-columns: 1fr;
+    }
+
+    .hero__text {
+        font-size: var(--font-size-md);
     }
 
     .hero__media-wrap {
@@ -220,13 +224,9 @@ const activeTab = computed<Tab>( // Вычисленный активный та
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .hero {
-        padding-block: var(--space-12);
-    }
-
-    .hero__text {
-        font-size: var(--font-size-md);
+        padding: var(--space-6);
     }
 
     .hero__tabs {

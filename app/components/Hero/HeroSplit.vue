@@ -135,7 +135,7 @@ import TheButton from '../UI/TheButton.vue';
 }
 
 /* Брикпоинты */
-@media (max-width: 860px) {
+@media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
     }
@@ -154,7 +154,7 @@ import TheButton from '../UI/TheButton.vue';
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .hero__content-wrap {
         padding-block: var(--space-12);
     }

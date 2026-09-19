@@ -40,7 +40,7 @@ const navLinks = [ // Массив ссылок навигации
     top: 0;
     left: 0;
     width: 100%;
-    min-height: var(--header-height);
+    height: var(--header-height);
     border-bottom: 1px solid rgb(255 255 255 / 0.1);
     background-color: rgb(13 13 13 / 0.82);
     backdrop-filter: blur(16px);
@@ -50,7 +50,7 @@ const navLinks = [ // Массив ссылок навигации
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: var(--header-height);
+    height: var(--header-height);
     gap: var(--space-6);
 }
 
@@ -92,7 +92,7 @@ const navLinks = [ // Массив ссылок навигации
 }
 
 /* Брикпоинты */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .header__container {
         align-items: flex-start;
         flex-direction: column;
