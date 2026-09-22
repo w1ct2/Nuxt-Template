@@ -46,7 +46,7 @@ import TheButton from '../UI/TheButton.vue';
 .hero__content-wrap {
     display: flex;
     align-items: center;
-    padding: var(--space-16) 0;
+    padding: var(--space-16) var(--space-8);
 }
 
 .hero__container {
