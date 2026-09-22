@@ -159,7 +159,7 @@ import TheButton from '../UI/TheButton.vue';
         padding: 0;
     }
     .hero__content-wrap {
-        padding: 0;
+        padding: var(--space-4) 0;
     }
 
     .hero__text {
