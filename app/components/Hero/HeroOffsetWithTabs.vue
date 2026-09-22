@@ -38,7 +38,6 @@
             </div>
             <!-- Медиа-превью активного таба -->
             <div
-                :id="`hero-panel-${activeTab.id}`"
                 class="hero__media"
                 role="tabpanel"
                 :aria-labelledby="`hero-tab-${activeTab.id}`"
@@ -79,7 +78,7 @@ const activeTab = computed<Tab>( // Вычисленный активный та
 .hero { /* Hero-секция с табами */
     min-height: calc(100dvh - var(--header-height));
     margin-top: var(--header-height);
-    padding-block: var(--space-20);
+    padding: var(--space-20);
     background-color: var(--color-surface);
 }
 /* Контейнер с контентом и медиа */
@@ -148,42 +147,6 @@ const activeTab = computed<Tab>( // Вычисленный активный та
     margin-top: var(--space-8);
 }
 
-.hero__button { /* Общие стили кнопки */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-2);
-    min-height: 48px;
-    padding-inline: var(--space-6);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-normal);
-    transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
-}
-
-.hero__button:hover {
-    transform: translateY(-1px);
-}
-
-.hero__button--primary {
-    background-color: var(--color-primary);
-    color: var(--color-text-primary);
-}
-
-.hero__button--primary:hover {
-    background-color: var(--color-primary-hover);
-}
-
-.hero__button--secondary {
-    color: var(--color-text-primary);
-}
-
-.hero__button--secondary:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-}
-
 .hero__media { /* Медиа-превью */
     position: relative;
     min-height: 480px;
@@ -191,6 +154,7 @@ const activeTab = computed<Tab>( // Вычисленный активный та
     border: 1px solid rgb(255 255 255 / 0.12);
     border-radius: var(--radius-lg);
     background-color: var(--color-surface-hover);
+    margin-bottom: var(--space-5);
 }
 
 .hero__media-badge { /* Бейдж на медиа */
@@ -213,6 +177,7 @@ const activeTab = computed<Tab>( // Вычисленный активный та
 
     .hero__container {
         grid-template-columns: 1fr;
+        gap: var(--space-8);
     }
 
     .hero__text {
@@ -222,11 +187,15 @@ const activeTab = computed<Tab>( // Вычисленный активный та
     .hero__media-wrap {
         padding: var(--space-4) var(--space-4) var(--space-6) 0;
     }
+
+    .hero__actions {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding: var(--space-6);
+        padding: 0;
     }
 
     .hero__tabs {
@@ -238,16 +207,8 @@ const activeTab = computed<Tab>( // Вычисленный активный та
         padding-inline: var(--space-2);
     }
 
-    .hero__actions {
-        width: 100%;
-    }
-
-    .hero__button {
-        flex: 1 1 180px;
-    }
-
     .hero__media {
-        min-height: 340px;
+        min-height: 300px;
         padding: var(--space-4);
     }
 

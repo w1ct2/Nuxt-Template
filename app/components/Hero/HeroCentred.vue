@@ -142,7 +142,7 @@ import TheButton from '../UI/TheButton.vue';
 /* Брикпоинты */
 @media (max-width: 768px) {
     .hero {
-        padding-block: var(--space-8);
+        padding: var(--space-8);
     }
 
     .hero__announcement {
@@ -161,6 +161,11 @@ import TheButton from '../UI/TheButton.vue';
 
     .hero__button {
         flex: 1 1 180px;
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        padding: 0;
     }
 }
 </style>

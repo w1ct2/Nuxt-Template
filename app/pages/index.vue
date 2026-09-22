@@ -5,17 +5,17 @@
         <HeroCentred />
         <HeroSplit />
         <HeroOffsetWithTabs />
-        <HeroTiles></HeroTiles>
+        <!-- <HeroTiles></HeroTiles> -->
         
-        <!-- <FeaturesInline />
+        <FeaturesInline />
         <FeaturesCentred2x2 />
-        <FeaturesProdScreenshot /> -->
+        <FeaturesProdScreenshot />
         <FeaturesOffset2x2 />
 
         <FaqAccordion />
-        <!-- <FaqSideBySide />
+        <FaqSideBySide />
         <FaqOffset />
-        <FaqThreeColumns /> -->
+        <FaqThreeColumns />
 
         <HitSales />
 

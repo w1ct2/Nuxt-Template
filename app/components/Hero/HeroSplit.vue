@@ -50,7 +50,6 @@ import TheButton from '../UI/TheButton.vue';
 }
 
 .hero__container {
-    width: min(100% - (var(--container-padding) * 2), 600px);
     margin-inline: auto var(--space-12);
 }
 
@@ -141,7 +140,7 @@ import TheButton from '../UI/TheButton.vue';
     }
 
     .hero__content-wrap {
-        padding-block: var(--space-16);
+        padding: var(--space-8);
     }
 
     .hero__container {
@@ -151,12 +150,16 @@ import TheButton from '../UI/TheButton.vue';
 
     .hero__media {
         min-height: 320px;
+        grid-row: 1/2;
     }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 0;
+    }
     .hero__content-wrap {
-        padding-block: var(--space-12);
+        padding: 0;
     }
 
     .hero__text {

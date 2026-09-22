@@ -120,8 +120,7 @@ withDefaults(defineProps<{ // Пропсы компонента хитов пр�
     align-items: stretch;
     justify-content: space-between;
     gap: var(--space-10);
-    height: 440px;
-    min-height: 0;
+    min-height: 440px;
     width: 100%;
 }
 
@@ -136,8 +135,10 @@ withDefaults(defineProps<{ // Пропсы компонента хитов пр�
     gap: var(--space-4);
     height: 100%;
     max-width: 480px;
-    align-self: stretch;
     flex: 1 1 0;
+}
+.hit-sales__row--reverse > .hit-sales__content {
+    align-items: end;
 }
 
 .hit-sales__row-title { /* Заголовок товара */
@@ -182,7 +183,6 @@ withDefaults(defineProps<{ // Пропсы компонента хитов пр�
 
 .hit-sales__media { /* Медиа-блок товара */
     position: relative;
-    height: 100%;
     max-width: 560px;
     width: 100%;
     border-radius: var(--radius-lg);
@@ -201,39 +201,52 @@ withDefaults(defineProps<{ // Пропсы компонента хитов пр�
     width: fit-content;
     background-color: var(--color-primary);
     position: absolute;
-    bottom: var(--space-4);
-    left: var(--space-6);
+    top: var(--space-4);
+    right: var(--space-6);
     color: var(--color-text-primary);
     font-weight: var(--font-weight-bold);
     padding: var(--space-2) var(--space-6);;
     border-radius: var(--radius-full);
 }
+.hit-sales__row--reverse > .hit-sales__media article {
+    left: var(--space-6);
+    right: auto;
+    bottom: var(--space-4);
+    top: auto;
+}
 
 /* Брикпоинты */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .hit-sales__row,
     .hit-sales__row--reverse {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: stretch;
+        gap: var(--space-6);
+    }
+    .hit-sales__row--reverse {
+        align-items: end;
     }
 
     .hit-sales__content {
         flex: 1 1 auto;
+        max-width: 440px;
     }
-
     .hit-sales__media {
         flex: 1 1 auto;
         min-height: 260px;
-    }
-}
-
-@media (max-width: 520px) {
-    .hit-sales {
-        padding-block: var(--space-12);
+        max-width: 440px;
     }
 
-    .hit-sales__title {
-        font-size: var(--font-size-2xl);
+    .hit-sales__media article {
+        font-size: var(--font-size-sm);
+        top: var(--space-2);
+        left: var(--space-3);
+    }
+    .hit-sales__row--reverse > .hit-sales__media article {
+        right: var(--space-3);
+        left: auto;
+        top: var(--space-2);
+        bottom: auto;
     }
 }
 </style>

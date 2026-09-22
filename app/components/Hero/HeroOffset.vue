@@ -124,7 +124,7 @@ import TheButton from '../UI/TheButton.vue';
 /* Брикпоинты */
 @media (max-width: 768px) {
     .hero {
-        padding: var(--space-12);
+        padding: var(--space-8);
     }
 
     .hero__text {
@@ -138,7 +138,8 @@ import TheButton from '../UI/TheButton.vue';
 
 @media (max-width: 480px) {
     .hero {
-        padding-block: var(--space-8);
+        padding: 0;
+        padding-top: var(--space-12);
     }
 
     .hero__text {

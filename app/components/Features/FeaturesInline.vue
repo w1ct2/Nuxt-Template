@@ -12,7 +12,7 @@
                     <span class="feature__icon" aria-hidden="true">{{ feature.icon }}</span>
                     <h3>{{ feature.title }}</h3>
                     <p>{{ feature.text }}</p>
-                    <a href="#" class="feature__link">Подробнее <span aria-hidden="true">→</span></a>
+                    <!-- <a href="#" class="feature__link">Подробнее <span aria-hidden="true">→</span></a> -->
                 </article>
             </div>
         </Container>
@@ -85,7 +85,7 @@ const features = [ // Массив карточек возможностей
 }
 
 /* Брикпоинты */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .features {
         padding-block: var(--space-16);
     }
@@ -96,5 +96,10 @@ const features = [ // Массив карточек возможностей
         margin-top: var(--space-12);
     }
 
+    .feature__icon {
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-lg);
+    }
 }
 </style>

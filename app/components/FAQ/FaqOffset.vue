@@ -36,8 +36,6 @@ import Container from '~/components/UI/Container.vue';
 .faq__intro p,
 .faq__item p {
     color: var(--color-text-muted);
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-relaxed);
 }
 .faq__intro p {
     margin: var(--space-6) 0;
@@ -58,6 +56,15 @@ import Container from '~/components/UI/Container.vue';
 .faq__item p {
     margin-top: var(--space-4);
     font-size: var(--font-size-md);
+}
+
+@media (max-width: 768px) {
+    .faq__list {
+        max-width: none;
+    }
+    .faq__wrapper {
+        flex-direction: column;
+    }
 }
 </style>
 

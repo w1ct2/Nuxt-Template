@@ -109,7 +109,7 @@ p {
 	font-size: var(--font-size-md); /* 16px */
 	font-weight: var(--font-weight-regular);
 	line-height: var(--line-height-relaxed);
-	color: var(--color-text-primary);
+	/* color: var(--color-text-primary); */
 }
 @media (max-width: 768px) {
 	h1 {
