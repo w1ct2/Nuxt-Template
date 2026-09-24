@@ -1,6 +1,8 @@
 <template>
     <Header />
     <main class="main">
+        <ContactOffset style="margin-top: 80px;"></ContactOffset>
+
         <HeroOffset />
         <HeroCentred />
         <HeroSplit />
@@ -42,6 +44,7 @@ import FaqOffset from '~/components/FAQ/FaqOffset.vue';
 import FaqThreeColumns from '~/components/FAQ/FaqThreeColumns.vue';
 import HitSales from '~/components/HitSales/HitSales.vue';
 import GallerySection from '~/components/GallerySection/Gallery.vue';
+import ContactOffset from '~/components/ContactForm/ContactOffset.vue';
 </script>
 
 <style scoped>
