@@ -374,7 +374,7 @@ const clearInput = () => {
     color: var(--color-text-muted);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
     .input.large {
         min-height: 48px;
     }

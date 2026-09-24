@@ -228,7 +228,7 @@ const props = defineProps({
     outline: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
     .button.large {
         padding: var(--space-3) var(--space-12);
         font-size: var(--font-size-md);

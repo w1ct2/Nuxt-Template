@@ -6,11 +6,12 @@
 </template>
 
 <script lang="ts" setup>
-withDefaults(defineProps<{ // Пропсы компонента-контейнера
-    as?: string; // HTML-тег для рендера контейнера
-}>(), {
-    as: 'div', // По умолчанию div
-});
+defineProps({
+    as: {
+        type: String,
+        default: 'div'
+    }
+})
 </script>
 
 <style scoped>
