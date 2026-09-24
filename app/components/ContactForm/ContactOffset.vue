@@ -60,8 +60,8 @@ import Container from '~/components/UI/Container.vue';
 }
 .contact__content h1 {
     margin-top: var(--space-12);
-    line-height: var(--line-height-tight);
-    margin-bottom: var(--space-8);
+    line-height: var(--line-height-minimum);
+    margin-bottom: var(--space-16);
 }
 .contact__article {
     display: flex;
