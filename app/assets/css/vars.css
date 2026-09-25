@@ -90,6 +90,12 @@
    --container-padding: 24px;
    --header-height: 72px;
 
+   /*----------- UI-elements -----------*/
+
+   --input-blocks-height-sm: 36px;
+   --input-blocks-height-md: 44px;
+   --input-blocks-height-lg: 52px;
+
    /*----------- TRANSITIONS -----------*/
 
    --transition-fast: 150ms ease;

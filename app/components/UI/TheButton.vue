@@ -108,21 +108,24 @@ const props = defineProps({
 }
 
 .button.large {
-    padding: var(--space-4) var(--space-16);
+    min-height: var(--input-blocks-height-lg);
+    padding: 0 var(--space-16);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-md);
     gap: var(--space-3);
 }
 
 .button.medium {
-    padding: var(--space-4) var(--space-10);
+    min-height: var(--input-blocks-height-md);
+    padding: 0 var(--space-10);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-md);
     gap: var(--space-2);
 }
 
 .button.small {
-    padding: var(--space-2) var(--space-6);
+    min-height: var(--input-blocks-height-sm);
+    padding: 0 var(--space-6);
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-sm);
     gap: var(--space-1);

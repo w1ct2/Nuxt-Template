@@ -229,9 +229,7 @@ const clearInput = () => {
 .input__label {
     margin-bottom: var(--space-2);
     color: var(--color-text-primary);
-    font-family: var(--font-primary);
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
 }
 
 .input__required {
@@ -239,13 +237,12 @@ const clearInput = () => {
     color: var(--color-error);
 }
 
+/* Само поле */
 .input {
     display: flex;
     align-items: center;
     width: 100%;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
     transition: all var(--transition-fast);
 }
 
@@ -254,15 +251,15 @@ const clearInput = () => {
 }
 
 .input.small {
-    min-height: 36px;
+    min-height: var(--input-blocks-height-sm);
 }
 
 .input.medium {
-    min-height: 44px;
+    min-height: var(--input-blocks-height-md);
 }
 
 .input.large {
-    min-height: 52px;
+    min-height: var(--input-blocks-height-lg);
 }
 
 .input__field {
@@ -278,16 +275,19 @@ const clearInput = () => {
 
 .input.small .input__field {
     padding: var(--space-2);
+    padding-left: 0;
     font-size: var(--font-size-sm);
 }
 
 .input.medium .input__field {
     padding: var(--space-3);
+    padding-left: 0;
     font-size: var(--font-size-md);
 }
 
 .input.large .input__field {
     padding: var(--space-3) var(--space-4);
+    padding-left: 0;
     font-size: var(--font-size-lg);
 }
 

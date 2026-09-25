@@ -9,15 +9,27 @@
                 'has-error': Boolean(error),
                 'is-disabled': disabled,
             }">
-                <select :id="id" class="select__field" :name="name" :disabled="disabled" :value="selectedValue"
+                <select 
+                    :id="id" 
+                    class="select__field" 
+                    :class="{ 'is-placeholder': !selectedValue }"
+                    :name="name" 
+                    :disabled="disabled" 
+                    :value="selectedValue"
                     :aria-invalid="Boolean(error) ? 'true' : 'false'" v-bind="$attrs" @change="onChange">
-                    <option v-for="option in normalizedOptions" :key="option.valueKey" :value="option.valueKey"
-                        :disabled="option.disabled">
+                    <option 
+                        v-for="option in normalizedOptions" 
+                        :key="option.valueKey" 
+                        :value="option.valueKey"
+                        :disabled="option.disabled"
+                        :selected="modelValue === option.value">
                         {{ option.label }}
                     </option>
                 </select>
 
-                <span class="select__arrow" aria-hidden="true">v</span>
+                <span class="select__arrow" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down preview-icon"><path d="m6 9 6 6 6-6"/></svg>
+                </span>
             </div>
         </div>
 
@@ -97,7 +109,7 @@ const onChange = (event: Event) => {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .select {
     display: flex;
     flex-direction: column;
@@ -116,8 +128,6 @@ const onChange = (event: Event) => {
     color: var(--color-text-primary);
     font-family: var(--font-primary);
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--line-height-normal);
     white-space: nowrap;
 }
 
@@ -127,24 +137,25 @@ const onChange = (event: Event) => {
     min-width: 0;
 }
 
+/* Само поле */
 .select__field {
     appearance: none;
     width: 100%;
     height: 44px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    background: var(--color-background);
+    background: transparent;
     color: var(--color-text-primary);
-    font-family: var(--font-primary);
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-normal);
-    padding: 0 var(--space-10) 0 var(--space-3);
+    padding: 0 var(--space-10) 0 0;
     outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--font-size-md);
     transition:
-        border-color var(--transition-fast),
-        box-shadow var(--transition-fast);
+        border-color var(--transition-fast);
     cursor: pointer;
+}
+
+.select__field.is-placeholder {
+    color: var(--color-text-muted);
 }
 
 .select__field:hover:not(:disabled) {
@@ -153,12 +164,10 @@ const onChange = (event: Event) => {
 
 .select__field:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgb(99 102 241 / 0.15);
 }
 
 .select__control.has-error .select__field {
     border-color: var(--color-error);
-    box-shadow: 0 0 0 3px rgb(239 68 68 / 0.15);
 }
 
 .select__control.is-disabled .select__field {
