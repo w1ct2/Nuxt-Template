@@ -133,7 +133,6 @@ import TheButton from '../UI/TheButton.vue';
     background-color: var(--color-surface-hover);
 }
 
-/* Брикпоинты */
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;

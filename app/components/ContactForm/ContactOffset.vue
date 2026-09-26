@@ -117,7 +117,6 @@ const message = ref('')
     min-height: 100vh;
 }
 
-/* Макет с контентом и скриншотом */
 .contact__layout {
     display: flex;
     justify-content: space-between;
@@ -126,7 +125,6 @@ const message = ref('')
     height: 100%;
 }
 
-/* Контент часть */
 .contact__content {
     flex-basis: 35%;
     height: 100%;
@@ -171,8 +169,8 @@ const message = ref('')
 }
 
 
+/* Форма  */
 .form {
-    /* Форма  */
     flex-basis: 45%;
     min-height: 75vh;
     padding: var(--space-12);
@@ -185,7 +183,6 @@ const message = ref('')
     gap: var(--space-10);
 }
 
-/* Брикпоинты */
 @media (max-width: 1000px) {
     .contact {
         padding: var(--space-16);

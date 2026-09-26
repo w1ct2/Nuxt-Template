@@ -129,7 +129,7 @@ function toggleItem(index: number) {
     padding: 0 40px var(--space-6) 0;
     margin: 0;
 }
-/* Брикпоинты */
+
 @media (max-width: 700px) {
     .faq__trigger,
     .faq__answer {

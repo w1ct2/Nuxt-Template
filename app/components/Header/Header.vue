@@ -91,7 +91,6 @@ const navLinks = [ // Массив ссылок навигации
     color: var(--color-text-primary);
 }
 
-/* Брикпоинты */
 @media (max-width: 768px) {
     .header__container {
         align-items: flex-start;

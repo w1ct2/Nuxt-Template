@@ -139,7 +139,6 @@ import TheButton from '../UI/TheButton.vue';
     color: var(--color-primary);
 }
 
-/* Брикпоинты */
 @media (max-width: 768px) {
     .hero {
         padding: var(--space-8);

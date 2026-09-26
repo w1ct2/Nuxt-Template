@@ -85,7 +85,6 @@ h3 {
     line-height: var(--line-height-relaxed);
 }
 
-/* Брикпоинты */
 @media (max-width: 850px) {
     .features {
         padding-block: var(--space-16);

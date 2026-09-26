@@ -185,8 +185,7 @@ import TheButton from '../UI/TheButton.vue';
     margin-bottom: 20%;
 }
 
-/* Брикпоинты */
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
     .hero__container {
         grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
         gap: var(--space-8);
@@ -197,7 +196,7 @@ import TheButton from '../UI/TheButton.vue';
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .hero {
         padding-block: var(--space-16);
     }
@@ -212,7 +211,7 @@ import TheButton from '../UI/TheButton.vue';
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .hero {
         padding-block: var(--space-12);
     }

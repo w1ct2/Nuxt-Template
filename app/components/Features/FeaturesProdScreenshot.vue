@@ -90,7 +90,6 @@ const features = [ // Массив списка возможностей
     box-shadow: var(--shadow-lg);
 }
 
-/* Брикпоинты */
 @media (max-width: 950px) {
     .features {
         padding-block: var(--space-16);

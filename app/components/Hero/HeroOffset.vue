@@ -121,7 +121,6 @@ import TheButton from '../UI/TheButton.vue';
     box-shadow: var(--shadow-lg);
 }
 
-/* Брикпоинты */
 @media (max-width: 768px) {
     .hero {
         padding: var(--space-8);

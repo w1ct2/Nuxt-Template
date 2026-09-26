@@ -84,7 +84,6 @@ const features = [ // Массив карточек возможностей
     color: var(--color-primary-hover);
 }
 
-/* Брикпоинты */
 @media (max-width: 768px) {
     .features {
         padding-block: var(--space-16);

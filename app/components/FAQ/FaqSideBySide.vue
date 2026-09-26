@@ -67,7 +67,7 @@ import Container from '~/components/UI/Container.vue';
     font-size: var(--font-size-md);
     line-height: var(--line-height-relaxed);
 }
-/* Элемент списка вопросов */
+
 @media (max-width: 700px) {
     .faq__item {
         grid-template-columns: 1fr;

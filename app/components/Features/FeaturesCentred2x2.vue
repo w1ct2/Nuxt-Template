@@ -82,7 +82,6 @@ const features = [ // Массив карточек возможностей
     line-height: var(--line-height-relaxed);
 }
 
-/* Брикпоинты */
 @media (max-width: 700px) {
     .features {
         padding-block: var(--space-16);
